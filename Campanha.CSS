@@ -1,0 +1,160 @@
+nav{
+background-color: rgb(238, 171, 46);
+width: 273px;
+height: 100%;
+display: flex;
+flex-direction:row;
+box-shadow: 0 10px 8px rgba(0, 0, 0, 0.534);
+margin-top: 1px;
+margin-left: 1px;
+}
+
+
+
+.principal .container{
+margin: auto;
+margin-top: 1px;
+flex-direction: row;
+}
+
+.texto1{
+display: flex;
+flex-direction:  row;
+margin-left: 275px;
+margin-top: 0px;
+}
+
+.linha1{
+margin-top: 0px;
+width: 1220px;
+margin-left: 234px;
+}
+
+.linha2{
+width: 210%;
+margin-right: 100px;
+}
+
+.principal .nome_perfil{
+background-color: aqua;
+margin-left: 75%;   
+}
+
+
+
+
+.menu-painel{
+height: 708px;
+width: 974px;
+background-color: #d9d9d9b9;
+margin-left: 410px;
+margin-top: 192px;
+border-radius: 30px;
+}
+
+.iniciar{
+margin: 10%;
+width: 30%;
+height: 8%;
+border-radius: 30px;
+background-color: #D75B36;
+font-size:20px;
+padding: 1px 1px 1px;
+justify-items: center;
+margin-top: 60%;
+}
+
+.salvar{
+margin: 5%;
+width: 30%;
+height: 8%;
+border-radius: 30px;
+background-color: #D75B36;
+font-size:20px;
+padding: 1px 1px 1px;
+justify-items: center;
+}
+
+.caixa-input {
+position: relative;
+margin-top: 300px;
+display: flex;
+
+}
+
+
+.caixa-input .input {
+font-size: 20px;
+padding: 10px 10px 10px 5px;
+display: block;
+width: 300px;
+border: none;
+border-bottom: 2px solid #D55A3B;
+background: transparent;
+font-family: 'Tomorrow', sans-serif;
+}
+
+.caixa-input .input:focus {
+outline: none;
+}
+
+
+.input{
+color: rgb(0, 0, 0);
+}
+
+
+
+.caixa-input .label {
+color: #D55A3B;
+font-size: 20px;
+font-weight: normal;
+font-family: 'Tomorrow', sans-serif;
+position: absolute;
+pointer-events: none;
+left: 5px;
+top: 10px;
+display: flex;
+}
+
+.caixa-input .label-letra {
+transition: 0.2s ease all;
+transition-delay: calc(var(--index) * .05s);
+}
+
+.caixa-input .input:focus ~ label .label-letra,
+.caixa-input .input:valid ~ label .label-letra {
+transform: translateY(-20px);
+font-size: 20px;
+color: #D55A3B;
+}
+
+.caixa-input .barra {
+position: relative;
+display: block;
+width: 200px;
+}
+
+.caixa-input .barra:before,.caixa-input .barra:after {
+content: '';
+height: 2px;
+width: 0;
+bottom: 1px;
+position: absolute;
+transition: 0.2s ease all;
+-moz-transition: 0.2s ease all;
+-webkit-transition: 0.2s ease all;
+}
+
+.caixa-input .barra:before {
+left: 50%;
+}
+
+.caixa-input .barra:after {
+right: 50%;
+}
+
+.caixa-input .input:focus ~ .barra:before,
+.caixa-input .input:focus ~ .barra:after {
+width: 50%;
+}
