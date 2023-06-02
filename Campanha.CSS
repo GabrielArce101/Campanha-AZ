@@ -1,5 +1,170 @@
+:root{
+  --cor-fundo-menu: rgb(0, 36, 54);
+  --cor-laranja-az: #EF4E23;
+}
+.bg{
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  opacity: 0.35;
+  position: absolute;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Tomorrow', serif;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.menulateral{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100%;
+  background-color: var(--cor-fundo-menu);
+  transition: 0.2s all ease;
+}
+.menulateral .listamenu{
+  display: flex;
+  flex-flow: column;
+  list-style-type: none;
+  justify-content: space-between;
+}
+/*AJUSTE VETOR DA LOGO AZ MERIT*/
+.menulateral .listamenu .logoazmerit{
+/* AZ merit */
+  position: relative;
+  margin-left: -15px;
+}
+.menulateral .listamenu .itemlista{
+  margin-top: 50px;
+  padding-top: auto;
+  width: 100%;
+}
+.menulateral .listamenu .logoazmerit #logoazmerit .vector_merit{
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s all ease;
+}
+.menulateral .listamenu .itemlista .itemmenu{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+}
+.menulateral .listamenu .itemlista .textoicon{
+  position: absolute;
+  padding: 2px 15px;
+  border-radius: 30px;
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s all ease;
+}
+.menulateral .listamenu .itemlista .itemmenu .icon{
+  width: 25px;
+  height: 25px;
+}
+/*Propriedades do hover*/
+.menulateral:hover{
+  width: 250px;
+}
+.menulateral:hover .listamenu .itemlista .itemmenu .textoicon{
+  opacity: 1;
+  visibility: visible;
+  margin-left: 50px;
+}
+.menulateral:hover .listamenu .logoazmerit #logoazmerit .vector_merit{
+  opacity: 1;
+  visibility: visible;
+}
+.menulateral .listamenu .itemlista .itemmenu:hover{
+  color: var(--cor-laranja-az);
+}
+.menulateral .listamenu .itemlista .itemmenu:hover .pathicon{
+  fill: var(--cor-laranja-az);
+}
+
+
+
+
+
+
+
+
+/*CABEÇALHO*/
+.cabecalho{
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+  height: 100px;
+  margin-left: 100px;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--cor-laranja-az);
+}
+/*CAIXA COM FOTO E NOME DO USUÁRIO*/
+.cabecalho .user_box{
+  position: fixed;
+  right: 0;
+  padding-top: 10px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cabecalho .user_box .nome_user{
+  font-size: 16px;
+  font-weight: bold;
+}
+.cabecalho .user_box .img_user{
+  width: 84px;
+  height: 84px;
+  padding-left: 10px;
+  border-radius: 50%;
+}
+/*CAIXA QUE INDICA PÁGINA ATUAL*/
+.tela_atual{
+  margin-top: 70px;
+  margin-left: 190px;
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+/*RODAPÉ*/
+.rodape{
+  left: 40%;
+  bottom: 0%;
+  z-index: 0;
+  opacity: 0.35;
+  padding: auto;
+  font-size: 14px;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 nav{
-background-color: rgb(238, 171, 46);
+background-color: transparent;
 width: 273px;
 height: 100%;
 display: flex;
@@ -11,34 +176,9 @@ margin-left: 1px;
 
 
 
-.principal .container{
-margin: auto;
-margin-top: 1px;
-flex-direction: row;
-}
 
-.texto1{
-display: flex;
-flex-direction:  row;
-margin-left: 275px;
-margin-top: 0px;
-}
 
-.linha1{
-margin-top: 0px;
-width: 1220px;
-margin-left: 234px;
-}
 
-.linha2{
-width: 210%;
-margin-right: 100px;
-}
-
-.principal .nome_perfil{
-background-color: aqua;
-margin-left: 75%;   
-}
 
 
 
@@ -49,112 +189,154 @@ width: 974px;
 background-color: #d9d9d9b9;
 margin-left: 410px;
 margin-top: 192px;
-border-radius: 30px;
+border-radius: 50px;
+margin: 1px;
 }
 
 .iniciar{
 margin: 10%;
 width: 30%;
-height: 8%;
+height: 50px;
 border-radius: 30px;
 background-color: #D75B36;
 font-size:20px;
 padding: 1px 1px 1px;
 justify-items: center;
-margin-top: 60%;
+
 }
 
 .salvar{
 margin: 5%;
 width: 30%;
-height: 8%;
+height: 50px;
 border-radius: 30px;
 background-color: #D75B36;
 font-size:20px;
 padding: 1px 1px 1px;
-justify-items: center;
-}
-
-.caixa-input {
-position: relative;
-margin-top: 300px;
-display: flex;
-
 }
 
 
-.caixa-input .input {
-font-size: 20px;
-padding: 10px 10px 10px 5px;
-display: block;
-width: 300px;
-border: none;
-border-bottom: 2px solid #D55A3B;
-background: transparent;
-font-family: 'Tomorrow', sans-serif;
-}
-
-.caixa-input .input:focus {
-outline: none;
+.botões-painel{
+  margin: 5%;
+  margin-top: 330px;
 }
 
 
-.input{
-color: rgb(0, 0, 0);
+.posição_boneco{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 5;
+  margin-left: 12%;
+  margin-top: 5%;
+  
 }
 
 
-
-.caixa-input .label {
-color: #D55A3B;
-font-size: 20px;
-font-weight: normal;
-font-family: 'Tomorrow', sans-serif;
-position: absolute;
-pointer-events: none;
-left: 5px;
-top: 10px;
-display: flex;
+.boneco{
+  width: 8%;
+  height: 8%;
+  position: relative;
+  margin: 0px;
+  right: -25px;
+  top: -230px;
 }
 
-.caixa-input .label-letra {
-transition: 0.2s ease all;
-transition-delay: calc(var(--index) * .05s);
+.menu-painel .user-box {
+  position: relative;
+  margin-top:  100px;
+
 }
 
-.caixa-input .input:focus ~ label .label-letra,
-.caixa-input .input:valid ~ label .label-letra {
-transform: translateY(-20px);
-font-size: 20px;
-color: #D55A3B;
+.menu-painel .user-box input {
+  width: 90%;
+  padding: 13px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 3px solid #BFBFBF;
+  outline: none;
+  background: transparent;
+  margin-left: 5%;
 }
 
-.caixa-input .barra {
-position: relative;
-display: block;
-width: 200px;
+.menu-painel .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
 }
 
-.caixa-input .barra:before,.caixa-input .barra:after {
-content: '';
-height: 2px;
-width: 0;
-bottom: 1px;
-position: absolute;
-transition: 0.2s ease all;
--moz-transition: 0.2s ease all;
--webkit-transition: 0.2s ease all;
+.menu-painel .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #D75B36;
+    pointer-events: none;
+    transition: .5s;
+    margin: 6% ;
+    margin-top: 0%;
+}
+  
+.menu-painel .user-box input:focus ~ label,
+.menu-painel .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #D75B36;
+    font-size: 12px;
+}
+  
+.menu-painel form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+  
+.menu-painel a:hover {
+    background: #03f40f;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03f40f,
+                0 0 25px #03f40f,
+                0 0 50px #03f40f,
+                0 0 100px #03f40f;
+}
+  
+.menu-painel a span {
+    position: absolute;
+    display: block;
 }
 
-.caixa-input .barra:before {
-left: 50%;
+@keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+  
+    50%,100% {
+      left: 100%;
+    }
 }
-
-.caixa-input .barra:after {
-right: 50%;
-}
-
-.caixa-input .input:focus ~ .barra:before,
-.caixa-input .input:focus ~ .barra:after {
-width: 50%;
+  
+.menu-painel a span:nth-child(1) {
+    bottom: 2px;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001aff);
+    animation: btn-anim1 2s linear infinite;
 }
