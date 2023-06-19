@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Campanha</title>
-    <link rel="stylesheet" href="Campanha.css">
-
+    <head>
+          <meta charset="utf-8">
+          <title>Index</title>
           <link rel="stylesheet" href="Campanha.css">
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tomorrow">
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
@@ -84,6 +80,27 @@
                 </a>
             </li>
         </ul>
+        <div class="logout_div">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(239, 78, 35, 0.6)" />
+                  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(239, 78, 35, 0.8)" />
+                  <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(239, 78, 35)" />
+                </g>
+            </svg>
+            <div class="boxlogout">
+                <a class="itemlogout" href="">
+                    <svg class="iconlogout" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.61538 0H14.3846C15.0783 0 15.7435 0.273928 16.234 0.761522C16.7245 1.24912 17 1.91044 17 2.6V5.2H14.3846V2.6H2.61538V23.4H14.3846V20.8H17V23.4C17 24.0896 16.7245 24.7509 16.234 25.2385C15.7435 25.7261 15.0783 26 14.3846 26H2.61538C1.92174 26 1.25651 25.7261 0.766028 25.2385C0.275549 24.7509 0 24.0896 0 23.4V2.6C0 1.91044 0.275549 1.24912 0.766028 0.761522C1.25651 0.273928 1.92174 0 2.61538 0Z" fill="white" fill-opacity="0.8"/>
+                        <path d="M15.4533 18.167L17.3333 20L24 13.5L17.3333 7L15.4533 8.833L18.8933 12.2H6V14.8H18.8933L15.4533 18.167Z" fill="white" fill-opacity="0.8"/>
+                    </svg>                        
+                    <span class="textologout">LogOut</span>
+                </a>
+            </div>
+        </div>
     </nav>
 
     <header class="cabecalho">
@@ -91,52 +108,48 @@
             <span class="nome_user">Gestor Humano</span>
             <a href="home.html"><img class="img_user" src="img/Gestor.png" alt=""></a>
         </div>
-        <div class="tela_atual"><span>Enviar AzMerit</span></div>
+        <div class="tela_atual"><span>Criar Campanha e Enviar AZcoins:</span></div>
     </header>
 
-   
- 
-
-<div class="posição_boneco">
-    <img  class="boneco" src="img/Boneco.png" alt="">   
-    <div class="menu-painel">
-        <div class="caixa-input">
-            <form>
-                <div class="user-box">
-                    <input type="text" name="" required="" autocomplete="on">
-                    <label>Nome da Campanha:</label>
+    
+    <div class="posicao_boneco">
+        <img  class="boneco" src="img/Boneco.png" alt="">   
+        <div class="menu_painel">
+            <div class="caixa-input">
+                <form>
+                    <div class="userbox">
+                        <input type="text" name="" required="" autocomplete="on">
+                        <label>Nome da Campanha:</label>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="botoes-data">   
+                <button class="data-inicio"> 
+                    <input class="input-data-inicio" type="date" name="" required="" autocomplete="off">
+                </button>
+                <button class="data-fim"> 
+                    <input class="input-data-fim" type="date" name="" required="" autocomplete="off">
+                </button>
+            </div>
+            
+            <div class="quantidade-azmerit">
+                <h2 class="titulo-quantidade">Quantidade de AzMerit:</h2>
+                <div>
+                    <img class="moeda" src="img/moeda AZ.png" alt="">
+                    <input class="input-quantidade" type="" name="" required="" autocomplete="on">
                 </div>
-            </form>
+            </div>
+            
+            
+            <div class="botoes-painel">
+                <button class="iniciar">Iniciar Campanha
+                <button class="salvar">Salvar e Sair</button>
+            </div>  
         </div>
-        
-        <div class="botões-data">   
-            <button class="data-inicio"> 
-                <input class="input-data-inicio" type="date" name="" required="" autocomplete="off">
-            </button>
-            <button class="data-fim"> 
-                <input class="input-data-fim" type="date" name="" required="" autocomplete="off">
-            </button>
-        </div>
-        
-        <div class="quantidade-azmerit">
-            <h2 class="titulo-quantidade">Qauntidade de AzMerit:</h2>
-                <input class="input-quantidade" type="" name="" required="" autocomplete="on">
-        </div>
-        <img class="moeda" src="img/moeda AZ.png" alt="">
-        
-        
-        <div class="botões-painel">
-            <button class="iniciar">Iniciar Campanha
-            <button class="salvar">Salvar e Sair</button>
-        </div> 
-
-        
-    
-        
-        
     </div>
-    
-   
 
-   
-</div>
+
+    <footer class="rodape"><p>2023 © AZ Tecnologia em Gestão. Todos os direitos reservados.</p></footer>
+</body>
+</html>
