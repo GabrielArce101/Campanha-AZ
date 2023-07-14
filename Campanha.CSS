@@ -1,370 +1,808 @@
 :root{
-    --cor-fundo-menu: rgb(0, 36, 54);
-    --cor-laranja-az: rgb(239, 78, 35);
+/*Cores*/
+--cor-fundo-menu: rgb(0, 36, 54);
+--cor-laranja-az: rgb(239, 78, 35);
+/*Transições*/
+--tran-menu: 0.5s all ease;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 .bg{
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    opacity: 0.35;
-    position: absolute;
+right: 0;
+bottom: 0;
+z-index: -1;
+opacity: 0.35;
+position: absolute;
 }
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Tomorrow', serif;
+.home{
+font-family: 'Tomorrow', serif;
 }
+/*Propriedades do Menu Lateral*/
 .menulateral{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 250px;
-    height: 100vh;
-    background-color: var(--cor-fundo-menu);
-    transition: 0.2s all ease;
+border-right-style: solid;
+border-right-color: var(--cor-laranja-az) ;
+border-right-width: 2px;
+z-index: 999;
+position: fixed;
+top: 0;
+bottom: 0;
+width: 250px;
+height: 100vh;
+background-color: var(--cor-fundo-menu);
+transition: var(--tran-menu);
 }
+
+/*Propriedades da Lista Menu*/
 .menulateral .listamenu{
-    display: flex;
-    flex-flow: column;
-    list-style-type: none;
-    justify-content: space-between;
+gap: 40px;
+display: flex;
+flex-flow: column;
+list-style-type: none;
+justify-content: space-between;
+margin-left: 40px;
+position: relative;
 }
-/*AJUSTE VETOR DA LOGO AZ MERIT*/
+
+/*Propriedades do SVG AzMerit*/
 .menulateral .listamenu .logoazmerit{
-/* AZ merit */
-    position: relative;
-    margin-left: -15px;
+margin-top: 4vh;
+position: relative;
+margin-left: -15px;
+transition: var(--tran-menu);
 }
+.menulateral .listamenu .logoazmerit #logoazmerit{
+align-items: center;
+display: flex;
+transition: width 0.5s;
+}
+.menulateral .listamenu .logoazmerit #logoazmerit .path_merit{
+padding-bottom: 4px;
+padding-left: 7px;
+}
+
+/*Propriedades dos itens da lista*/
 .menulateral .listamenu .itemlista{
-    margin-top: 50px;
-    padding-top: auto;
-    width: 100%;
+width: 100%;
 }
 .menulateral .listamenu .itemlista .itemmenu{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    align-items: center;
-    display: flex;
-    cursor: pointer;
-    width: 100%;
+align-items: center;
+display: flex;
+cursor: pointer;
+width: 100%;
 }
 .menulateral .listamenu .itemlista .itemmenu .textoicon{
-    position: absolute;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 2px 15px;
-    margin-left: 50px;
-    border-radius: 30px;
+color: white;
+text-decoration: none;
+position: absolute;
+font-size: 1rem;
+font-weight: 500;
+padding: 2px 15px;
+margin-left: 50px;
 }
 .menulateral .listamenu .itemlista .itemmenu .icon{
-    width: 25px;
-    height: 25px;
+width: 25px;
+height: 25px;
 }
 
-
-/*Propriedades do hover*/
-.menulateral .listamenu .itemlista .itemmenu:hover{
-    color: var(--cor-laranja-az);
-}
+/*Propriedades do hover dos itens*/
 .menulateral .listamenu .itemlista .itemmenu:hover .pathicon{
-    fill: var(--cor-laranja-az);
+fill: var(--cor-laranja-az);
+}
+.menulateral .listamenu .itemlista .itemmenu:hover .textoicon{
+color: var(--cor-laranja-az);
 }
 
+/*Propriedades do hover de Cadastrar*/
+.menulateral .listamenu .itemlista .cadastrar:hover{
+color: var(--cor-laranja-az);
+}
+.menulateral .listamenu .itemlista .cadastrar:hover .pathicon{
+fill: var(--cor-laranja-az);
+}
+.menulateral .listamenu .itemlista .cadastrar:hover .setabaixo path{
+fill: var(--cor-laranja-az);
+}
+
+/*Botão Cadastrar*/
+.menulateral .listamenu .itemlista .cadastrar{
+text-decoration: none;
+color: rgb(255, 255, 255);
+align-items: center;
+display: flex;
+cursor: pointer;
+width: 100%;
+}
+.menulateral .listamenu .itemlista .cadastrar .textoicon{
+position: absolute;
+font-size: 1rem;
+font-weight: 500;
+padding: 2px 15px;
+margin-left: 50px;
+}
+.menulateral .listamenu .itemlista .cadastrar .icon{
+width: 25px;
+height: 25px;
+}
+.menulateral .listamenu .itemlista .cadastrar .setabaixo{
+justify-content: center;
+align-items: center;
+transform: translateY(-50%);
+display: flex;
+width: 25px;
+height: 25px;
+position: absolute;
+font-size: 22px;
+right: 10px;
+margin-top: 30px;
+}
+.menulateral .listamenu .itemlista .cadastrar .setabaixo.rotate{
+transform: translateY(-50%) rotate(-180deg);
+}
 
 /*Tamanho das Ondas*/
 .menulateral .logout_div{
-    position: relative;
-    height: 100vh;
-    margin-top: 50px;
-    overflow: hidden;
+z-index: 5;
+height: 100vh;
+margin-top: 50px;
+overflow: hidden;
+position: relative;
 }
 
-/*Estilo das Ondas https://www.cssscript.com/animated-waves-svg/*/
+/*Propriedades das Ondas https://www.cssscript.com/animated-waves-svg/*/
 .logout_div .waves{
-    position: relative;
-    height: 10vh;
-    margin-bottom: -7px;
-    min-height: 100px;
-    max-height: 550px;
+position: relative;
+height: 10vh;
+margin-bottom: -7px;
+min-height: 100px;
+max-height: 550px;
 }
-
 .parallax > use{
-    animation: move-forever 10s cubic-bezier(.55,.5,.45,.5) infinite;
+animation: move-forever 10s cubic-bezier(.55,.5,.45,.5) infinite;
 }
 .parallax > use:nth-child(1){
-    animation-delay: -1s;
-    animation-duration: 10s;
+animation-delay: -1s;
+animation-duration: 10s;
 }
 .parallax > use:nth-child(2){
-    animation-delay: -7s;
-    animation-duration: 10s;
+animation-delay: -7s;
+animation-duration: 10s;
 }
 .parallax > use:nth-child(3){
-    animation-delay: -5s;
-    animation-duration: 10s;
+animation-delay: -5s;
+animation-duration: 10s;
 }
 @keyframes move-forever{
-    0% {
-        transform: translate3d(-90px,0,0);
-    }
-    100% { 
-        transform: translate3d(85px,0,0);
-    }
+0% {
+    transform: translate3d(-90px,0,0);
 }
-  /*Shrinking for mobile*/
+100% { 
+    transform: translate3d(85px,0,0);
+}
+}
+/*Shrinking for mobile*/
 @media (max-width: 768px){
-    .waves {
-        height:40px;
-        min-height:40px;
-    }
+.waves {
+    height:40px;
+    min-height:40px;
 }
-
+}
 .logout_div .boxlogout{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--cor-laranja-az);
+position: relative;
+height: auto;
+min-height: 100%;
+width: 100vw;
+background-color: var(--cor-laranja-az);
 }
 .logout_div .boxlogout .itemlogout{
-    position: fixed;
-    margin-left: 40px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    align-items: center;
-    display: flex;
-    cursor: pointer;
-    width: 100%;
-    bottom: 5%;
+position: fixed;
+margin-left: 40px;
+text-decoration: none;
+color: white;
+align-items: center;
+display: flex;
+cursor: pointer;
+bottom: 3%;
 }
 .logout_div .boxlogout .itemlogout .iconlogout{
-    width: 25px;
-    height: 25px;
+width: 25px;
+height: 25px;
 }
 .logout_div .boxlogout .itemlogout .textologout{
-    position: absolute;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 2px 15px;
-    margin-left: 50px;
-    border-radius: 30px;
+position: absolute;
+font-size: 1rem;
+font-weight: 500;
+padding: 2px 15px;
+margin-left: 50px;
 }
 
-
-
-/*CABEÇALHO*/
+/*Propriedades do Cabeçalho*/
 .cabecalho{
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 1;
-    height: 100px;
-    margin-left: 250px;
-    border-bottom-width: 3px;
-    border-bottom-style: solid;
-    border-bottom-color: var(--cor-laranja-az);
+display: flex;
+z-index: 1;
+align-items: center;
+height: 100px;
+margin-left: 250px;
+border-bottom-width: 3px;
+border-bottom-style: solid;
+border-bottom-color: var(--cor-laranja-az);
 }
-/*CAIXA COM FOTO E NOME DO USUÁRIO*/
+
+/*Propriedades da área do usuário*/
 .cabecalho .user_box{
-    position: fixed;
-    right: 0;
-    padding-top: 10px;
-    padding-right: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+position: fixed;
+right: 0;
+padding-top: 10px;
+padding-right: 20px;
+display: flex;
+flex-direction: row;
+align-items: center;
 }
 .cabecalho .user_box .nome_user{
-    font-size: 1rem;
-    font-weight: bold;
+font-size: 1rem;
+font-weight: bold;
 }
 .cabecalho .user_box .img_user{
-    width: 84px;
-    height: 84px;
-    padding-left: 10px;
-    border-radius: 50%;
+width: 84px;
+height: 84px;
+margin-left: 10px;
+border-radius: 50%;
 }
-/*CAIXA QUE INDICA PÁGINA ATUAL*/
-.tela_atual{
-    margin-top: 70px;
-    margin-left: 60px;
-    font-size: 20px;
-    font-weight: bolder;
-    text-transform: uppercase;
+.cabecalho .tela_atual{
+margin-top: 70px;
+margin-left: 60px;
+font-size: 20px;
+font-weight: bolder;
+text-transform: uppercase;
 }
-/*RODAPÉ*/
+
+/*Propriedades do Rodapé*/
 .rodape{
-    left: 40%;
-    bottom: 0%;
+left: 45%;
+bottom: 0%;
+z-index: 1;
+opacity: 0.35;
+padding: auto;
+font-size: 14px;
+position: absolute;
+text-align: center;
+font-weight: bolder;
+color: rgb(0, 0, 0);
+}
+
+/*Propriedades da Página Exemplo*/
+.paginaexemplo{
+z-index: 2;
+position: fixed;
+width: auto;
+left: 300px;
+right: 50px;
+height: 75vh;
+background-color: red;
+margin-top: 3%;
+border-radius: 30px;
+}
+
+/*Propriedades do Sub Menu*/
+.itemlista .submenu{
+display: none;
+transition: var(--tran-menu);
+}
+.itemlista .submenu.show{
+display: flex;
+gap: 40px;
+margin-left: 65px;
+padding-top: 25px;
+flex-flow: column;
+list-style-type: none;
+justify-content: space-between;
+}
+.itemlista .submenu.show .textosub{
+color: white;
+text-decoration: none;
+position: absolute;
+font-size: 1rem;
+font-weight: 500;
+padding: 2px 15px;
+margin-left: 20px;
+}
+.itemlista .submenu.show li a:hover .textosub{
+color: var(--cor-laranja-az);
+}
+.itemlista .submenu.show li a:hover .pathicon{
+fill: var(--cor-laranja-az);
+}
+
+/*Configurações do Site Responsivo*/
+@media only screen and (max-width: 768px){
+.menulateral.closed{
+    width: 80px;
+}
+.menulateral.closed .listamenu .logoazmerit{
+    margin-left: -25px;
+}
+.menulateral.closed .listamenu .logoazmerit #logoazmerit .path_az{
+    width: 55px;
+}
+.menulateral.closed .listamenu .logoazmerit #logoazmerit .path_merit{
+    display: none;
+}
+.menulateral.closed .textoicon{
+    opacity: 0;
+    display: none;
+}
+.menulateral.closed .listamenu .itemlista .cadastrar .setabaixo{
+    display: none;
+}
+
+
+
+/*Faz o resto da tela ficar escuro*/
+.menulateral .menuabertomobile{
     z-index: 0;
-    opacity: 0.35;
-    padding: auto;
-    font-size: 14px;
-    position: absolute;
-    text-align: center;
-    font-weight: bolder;
-    color: rgb(0, 0, 0);
-}
-
-
-/* Painel Principal */
-.posicao_boneco{
-    display: flex;
-    flex-direction: row;
-    z-index: 5;
-    margin-left: 320px;
-    margin-top: 5%;
     position: fixed;
-    width: 80vw;
-    height: 75vh;
+    top: 0;
+    bottom: 0;
+    margin-left: 252px; /*2px a mais por conta da borda*/
+    width: 100vw;
+    background-color: black;
+    height: 100vh;
+    opacity: 0.4;
+    animation: fadeIn 3s;
+}
+.menulateral.closed .menuabertomobile{
+    display: none;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+        to { opacity: 0.4; }
 }
 
-.posicao_boneco .boneco{
-    position: relative;
-    width: 12%;
-    height: 35%;
+
+
+.cabecalho{
+    margin-left: 80px;
+    height: 80px;
+}
+.cabecalho .user_box .img_user{
+    width: 65px;
+    height: 65px;
+}
+.cabecalho .tela_atual{
+    margin-top: 0;
+    max-width: 200px;
+}
+.cabecalho .tela_atual span{
+    text-align: justify;
+}
+.home .paginaexemplo{
+    left: 100px;
+    right: 20px;
+}
+.menulateral .listamenu .itemlista{
+    margin-left: -15px;
+}
+.menulateral.closed .listamenu .itemlista{
+    pointer-events: none;
+}
+.logout_div .boxlogout .itemlogout{
+    margin-left: 30px;
+}
+.menulateral.closed .logout_div .boxlogout .itemlogout .textologout{
+    display: none;
+}
+.rodape{
+    left: 25%;
+    padding-right: 20px;
 }
 
-.posicao_boneco .menu_painel{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #d9d9d9b9;
-    border-radius: 50px;
-    margin-left: -33px;
 }
 
-.posicao_boneco .menu_painel .botoes-painel .iniciar{
-margin: 10%;
-width: 30%;
-height: 60px;
-border-radius: 30px;
-background-color: var(--cor-laranja-az);
-font-size:20px;
-padding: 1px 1px 1px;
-justify-items: center;
-color:#fff ;
-border-color: transparent;
+
+.boneco{
+width: 130px;
+margin-left: 15.3%;
+margin-top: 150px;
 }
 
-.posicao_boneco .menu_painel .botoes-painel .salvar{
-margin: 5%;
-width: 30%;
-height: 60px;
-border-radius: 30px;
-background-color: var(--cor-laranja-az);
-font-size:20px;
-padding: 1px 1px 1px;
+
+.painel-principal{
+background-color: #ececec8c;
+width: 70%;
+height: 800px;
+border-radius: 20px;
+margin-top: -18%;
+margin-left: 21%;
+}
+
+
+
+
+/* inicio Posisão do input */
+.painel-principal .caixa-input {
+position: relative;
+top: 12.2%;/*distancia entre os inputs caso um em cima do*/
+display: flex;
+left: 9%;
+font-size: 18px;
+}
+
+/* Característica do input */
+.painel-principal .caixa-input .input {
+font-size: 16px; /*tamanho fonte escrita usuário*/ 
+padding: 10px 10px 10px 5px; 
+display: block;
+width: 400px; /* tamanho da caixa de input + borda */
+border: none;
+border-bottom: 2px solid #d55a3b00;
+background: transparent;
+font-family: 'Tomorrow', sans-serif; /* fonte utilizada no input */
+}
+
+.painel-principal  .caixa-input .input:focus {
+outline: none; 
+}
+
+
+
+.input{
+color: black; /*cor do que o usuários está digitando*/
+margin-left: 0.5%;
+}
+
+.caixa-input .label {
+color: rgb(239, 78, 35);/*cor do texto acima da caixa de texto*/
+font-size: 16px;/*tamanho fonte que está digitando*/
+font-weight: normal;
+font-family: 'Tomorrow', sans-serif; /*fonte utlizada na texto acima do input*/
+position: absolute;
+pointer-events: none;
+left: 0;
+top: 10%;
+display: flex;
+}
+
+.caixa-input .label-letra {
+transition: 0.2s ease all;
+transition-delay: calc(var(--index) * .05s);
+font-size: 18px;/*Tamanho do span em cima do label*/  
+}
+
+.caixa-input .input:focus ~ label .label-letra,
+.caixa-input .input:valid ~ label .label-letra {
+transform: translateY(-20px);
+font-size: 16px;/*tamanho após o usuário der click*/
+color: rgb(239, 78, 35);
+}
+
+.caixa-input .barra {
+position: relative;
+display: block;
+width: 20%;
+}
+
+.caixa-input .barra:before,.caixa-input .barra:after {
+content: '';
+height: 2px;
+width: 0;
+bottom: 1px;
+position: absolute;
+transition: 0.2s ease all;
+-moz-transition: 0.2s ease all;
+-webkit-transition: 0.2s ease all;
+}
+
+.caixa-input .barra:before {
+left: 50%;
+}
+
+.caixa-input .barra:after {
+right: 50%;
+}
+
+#espaco{
+color: transparent;
+}
+
+.caixa-input .input:focus ~ .barra:before,
+.caixa-input .input:focus ~ .barra:after {
+width: 50%;
+}
+/* Fim Input com Span Subindo */
+
+
+/* inicio Posisão do input 2*/
+.painel-principal .caixa-input2 {
+position: relative;
+top: 12.2%;/*distancia entre os inputs caso um em cima do*/
+display: flex;
+left: 9%;
+font-size: 18px;
+}
+
+/* Característica do input */
+.painel-principal .caixa-input2 .input {
+font-size: 16px; /*tamanho fonte escrita usuário*/ 
+padding: 10px 10px 10px 5px; 
+display: block;
+margin-left: 0.7%;
+width: 20%; /* tamanho da caixa de input + borda */
+border: none;
+border-bottom: 2px solid #d55a3b00;
+background: transparent;
+font-family: 'Tomorrow', sans-serif; /* fonte utilizada no input */
+}
+
+.painel-principal  .caixa-input2 .input:focus {
+outline: none; 
+}
+
+
+
+.input{
+color: black; /*cor do que o usuários está digitando*/
+margin-left: 0.5%;
+}
+
+.caixa-input2 .label {
+color: rgb(239, 78, 35);/*cor do texto acima da caixa de texto*/
+font-size: 16px;/*tamanho fonte que está digitando*/
+font-weight: normal;
+font-family: 'Tomorrow', sans-serif; /*fonte utlizada na texto acima do input*/
+position: absolute;
+pointer-events: none;
+left: 3px;
+top: 5%;
+display: flex;
+}
+
+.caixa-input2 .label-letra {
+transition: 0.2s ease all;
+transition-delay: calc(var(--index) * .05s);
+font-size: 18px;/*Tamanho do span em cima do label*/  
+}
+
+.caixa-input2 .input:focus ~ label .label-letra,
+.caixa-input2 .input:valid ~ label .label-letra {
+transform: translateY(-20px);
+font-size: 16px;/*tamanho após o usuário der click*/
+color: rgb(239, 78, 35);
+}
+
+.caixa-input2 .barra {
+position: relative;
+display: block;
+width: 200px;
+}
+
+.caixa-input2 .barra:before,.caixa-input2 .barra:after {
+content: '';
+height: 2px;
+width: 0;
+bottom: 1px;
+position: absolute;
+transition: 0.2s ease all;
+-moz-transition: 0.2s ease all;
+-webkit-transition: 0.2s ease all;
+}
+
+.caixa-input2 .barra:before {
+left: 50%;
+}
+
+.caixa-input2 .barra:after {
+right: 50%;
+}
+
+#espaco{
+    color: transparent;
+}
+
+.caixa-input2 .input:focus ~ .barra:before,
+.caixa-input2 .input:focus ~ .barra:after {
+width: 50%;
+}
+/* Fim Input com Span Subindo */
+
+
+.linha1{
+border-color: #d9d9d9;
+width: 50%;
+margin-top: 6.5%;
+margin-left: 9.5%;
+}
+
+.linha2{
+border-color: #d9d9d9;
+width: 20%;
+margin-top: 6.5%;
+margin-left: 9.5%;
+}
+
+.data{
+margin-top: 1%;
+justify-content: space-evenly;
+}
+
+
+.posicao-data{
+margin-top: 5%;
+display: flex;
+flex-direction: row;
+}
+
+form {
+padding: 20px 30px 45px 20px;
+width: 300px;
+margin: 50px auto;
+}
+
+.lb {
+display: block;
+margin-bottom: 10px;
+font-size: 18px;
+color:rgb(239, 78, 35) ;
+font-weight: bold;
+}
+
+.infos,input[type="date"] {
+width: 100%;
+padding: 10px;
+font-size: 16px;
+font-family: 'Tomorrow', sans-serif;
+border-radius: 5px;
+border: none;
+margin-bottom: 20px;
+background-color: rgb(2, 93, 138);
+color: white;
+}
+
+.botao-editar{
+margin-left: 255px;
+margin-top: -50px;
+}
+
+
+/*Botões inicar e cancelar campanha*/
+
+.botoes{
+display: flex;
+margin-top: 10%;
+justify-content: space-evenly;
+font-size: 18px;
+}
+
+.custom-btn {
+width: 20%;
+height: 55px;
 color: #fff;
-border-color: transparent;
+border-radius: 50px;
+padding: 10px 25px;
+font-family: 'Tomorrow', sans-serif;
+font-weight: 500;
+background: transparent;
+cursor: pointer;
+transition: all 0.3s ease;
+position: relative;
+display: inline-block;
+box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+7px 7px 20px 0px rgba(0,0,0,.1),
+4px 4px 5px 0px rgba(0,0,0,.1);
+outline: none;
+}
+
+.btn-1 {
+background: linear-gradient(0deg, rgb(239, 78, 35) 0%, rgb(239, 78, 35) 100%);
+border: none;
+}
+
+.btn-1:before {
+height: 0%;
+width: 2px;
+}
+
+.btn-1:hover {
+box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+            -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+inset -4px -4px 6px 0 rgba(255,255,255,.2),
+inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.visualizar{
+    margin-top: 1%;
+    margin-left: 17%;
+    cursor: pointer;
 }
 
 
 
-.menu_painel .caixa-input .userbox {
-  position: relative;
-  margin-top:  10%;
+
+
+/*Modais*/
+#close-modal{
+    background-color: rgb(239, 78, 35);
 }
 
-
-
-.posicao_boneco .menu_painel .userbox input{
-  width: 90%;
-  padding: 13px 0;
-  font-size: 16px;
-  color: var(--cor-laranja-az);
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 3px solid #BFBFBF;
-  outline: none;
-  background: transparent;
-  margin-left: 5%;
+.botao{
+    top: 67%;
+    left: 75%;
+    width: 20%;
+    height: 55px;
+    padding: 8.6rem 1.2em; 
+    color: #ffffff;
+    border: none;
+    opacity: 0.9;
+    font-size: 18px;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-family: 'Tomorrow', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
 }
+.botao:hover{ 
+    opacity: 1;}
 
-.posicao_boneco .menu_painel .userbox label{
-    position: absolute;
+#fade{
+    position: fixed;
     top: 0;
     left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: var(--cor-laranja-az);
-    pointer-events: none;
-    transition: .5s;
-    margin: 5% ;
-    margin-top: 0%;
-}
-  
-.posicao_boneco .menu_painel .userbox input:focus ~ label,
-.posicao_boneco .menu_painel .userbox input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: var(--cor-laranja-az);
-    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.459);
+    z-index: 5;
 }
 
-
-
-/*DATA INICIO*/
-.posicao_boneco .menu_painel .botoes-data .data-inicio{
-  margin-left: 10.4%;
-  background-color: #FFFFFF;
-  height: 56px;
-  width: 250px;
-  border-radius: 30px;
-}
-.posicao_boneco .menu_painel .botoes-data .data-inicio .input-data-inicio{
-  border-color: transparent;
-  width: 80%;
-  height: 90%;
-  font-size: 25px;
-  border-color: transparent;
+#modal{
+    position: fixed;
+    left: 50%;
+    top: 50%; 
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 900px;
+    max-width:90%;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem; 
+    z-index: 10;
 }
 
-/*DATA FIM*/
-.posicao_boneco .menu_painel .botoes-data .data-fim{
-  margin-left: 30%;
-  background-color: #FFFFFF;
-  height: 56px;
-  width: 250px;
-  border-radius: 30px;
-  border-color: transparent;
-}
-.posicao_boneco .menu_painel .botoes-data .data-fim .input-data-fim{
-  border: none;
-  width: 80%;
-  height: 90%;
-  font-size: 25px;
+#fade,
+#modal{ transition: 0.5s;
+opacity: 1; 
+pointer-events: all;
 }
 
+.modal-header{
+display: flex;
+border-bottom: none; 
+margin-bottom: 1em; 
+padding-bottom: 1em;
+}
 
-/*Input das Moedas*/
-.posicao_boneco .menu_painel .quantidade-azmerit{
-    margin-left: 11%;
+.modal-body .conteudo-modal{ 
+    margin-bottom: 1rem; 
+}
+
+#modal.hide,
+#fade.hide{
+opacity: 0; pointer-events: none;
+}
+
+#modal.hide{ top: 0;
+}
+/*Fim dos Modais*/
+
+.titulo-modal{
     display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 5%;
-}
-
-.posicao_boneco .menu_painel .quantidade-azmerit .titulo-quantidade{
-    font-size: 20px;
-}
-.posicao_boneco .menu_painel .quantidade-azmerit div .moeda{
-    position: relative;
-    width: 50px;
-    height: 52px;
-    top: 20%;
-}
-
-.posicao_boneco .menu_painel .quantidade-azmerit div .input-quantidade{
-  width: 150px;
-  height: 40px;
-  font-size: 20px;
-  color: var(--cor-laranja-az);
-  background-color: rgb(255, 255, 255);
-  border-color: transparent;
-  margin-left:1% ;
-}   
-.posicao_boneco .menu_painel .botoes-painel{
-    
-
+    margin-left: 10px;
 }
