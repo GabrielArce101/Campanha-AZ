@@ -2,7 +2,7 @@
 $dbHost = 'localhost';
 $dbName = 'AZMerit';// Mudar para AZMerit !!
 $dbUser = 'postgres';
-$dbPass = '1234';
+$dbPass = '************';   /*Mudar senha depois*/
 
 try{
     $conexao = new PDO("pgsql:host=$dbHost;dbname=" . $dbName, $dbUser, $dbPass);
