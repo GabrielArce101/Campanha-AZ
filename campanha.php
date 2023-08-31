@@ -14,14 +14,16 @@ class Usuario{
             echo "Banco não conectado";
         }
     }
-public function campanha($nome_campanha, $qde_az_por_colaborador, $saldo_distr, $data_inicio, $hora_inicio, $data_final, $hora_final)
+public function campanha($id_campanha, $nome_campanha, $qde_az_por_colaborador, $id_carteira, $saldo_distr, $data_inicio, $hora_inicio, $data_final, $hora_final)
 {  
     try
     {
-        $sql = $this->pdo->prepare("INSERT INTO campanha (nome_campanha, qde_az_por_colaborador, saldo_distr, data_inicio, hora_inicio, data_final, hora_final) 
-        VALUES (:nc , :qz , :sld , :dt1 , :dt2 , :hr1 , :hr2)");
+        $sql = $this->pdo->prepare("INSERT INTO campanha (id_campanha, nome_campanha, qde_az_por_colaborador, id_carteira, saldo_distr, data_inicio, hora_inicio, data_final, hora_final) 
+        VALUES (:id_camp, :nc, :qz, :id_cart, :sld, :dt1, :dt2, :hr1, :hr2)");
+        $sql->bindValue(":id_camp",$id_campanha);
         $sql->bindValue(":nc",$nome_campanha);
         $sql->bindValue(":qz",$qde_az_por_colaborador);
+        $sql->bindValue(":id_cart",$id_carteira);
         $sql->bindValue(":sld",$saldo_distr);
         $sql->bindValue(":dt1",$data_inicio);
         $sql->bindValue(":hr1",$hora_inicio);
