@@ -582,14 +582,18 @@ color: rgb(239, 78, 35);
     margin-left: 8vh;
     }
 
-.data{
+.infos,data{
     width: 40vh;
     margin-top: 0vh;
     justify-content: space-evenly;
 }
 
+.infos.hora{
+    width: 14vh;
+}
+
 .posicao-data{
-    margin-top: 10vh;
+    margin-top: 5vh;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -622,20 +626,20 @@ color: white;
 
 /*Botões inicar e cancelar campanha*/
 .botoes{
-margin-top: 10vh;
+margin-top: 3vh;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
-margin-left: 8%;
-font-size: 2.5vh;
+font-size: 2.4vh;
 }
 
-.letra-botao:hover{
+#letra-botao:hover{
     color: white;
     text-decoration: none;
+    font-size: 1.5rem;
 }
 
-.letra-botao{
+#letra-botao{
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 1.5rem;
@@ -682,6 +686,7 @@ inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
     left: 45vh;
     top: 5vh;
     width: 35vh;
+    font-size: 1.5rem;
 }
 
 #fade{
