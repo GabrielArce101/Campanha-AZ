@@ -1,28 +1,162 @@
-<?php    
-    require_once 'config.php'; 
-    include_once 'campanha.php'; 
-    $Usuario = new Usuario();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <title>Criar Campanha</title>
-    <link rel="stylesheet" href="Campanha.css">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-</head>
-<body class="home">
-    <?php include_once 'menu.php'; ?>
+    <head>
+        <meta charset="utf-8">
+        <title>Criar Campanha</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tomorrow">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+        <link rel="stylesheet" href="Campanha.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    </head>
+    <body class="home">
+    <img class="bg" src="../../img/Fundo.png" alt="">
+    <!--MENU LATERAL-->
+    <nav class="menulateral closed">
+        <ul class="listamenu">
+            <li class="logoazmerit">
+                <a href="home.php" id="logoazmerit">
+                    <svg class="path_az" width="68" height="38" viewBox="0 0 68 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M28.6242 0H28.5957C26.2906 0 20.4094 0.282 18.4089 0.675077C16.2244 1.09487 14.1107 1.80958 12.1289 2.79867C10.2347 3.74663 8.53942 5.03212 7.13077 6.58867C5.72107 8.14395 4.73065 10.083 4.15948 12.406L15.1549 12.1497C15.71 10.197 16.6821 8.78839 18.0714 7.92388C19.4606 7.05796 21.2391 6.60001 23.407 6.55015C24.3141 6.52465 25.222 6.56106 26.1241 6.65916C26.8694 6.72846 27.5921 6.94662 28.2473 7.30008C28.823 7.62571 29.2745 8.12515 29.5336 8.72289C29.8074 9.34029 29.8491 10.1842 29.6584 11.2481C29.6131 11.7179 29.4619 12.1721 29.2158 12.5784C28.9695 12.9846 28.6344 13.3328 28.2342 13.5981C27.2679 14.2074 26.1967 14.6416 25.0723 14.8799C23.6326 15.2128 22.1725 15.4547 20.7009 15.6042C19.075 15.7823 17.4155 16.0066 15.7224 16.2772C14.0294 16.5492 12.3341 16.9003 10.6367 17.3304C9.0015 17.7411 7.4344 18.3763 5.98255 19.2168C4.55534 20.0517 3.30989 21.1513 2.31668 22.4535C1.27805 23.7951 0.576139 25.4857 0.210939 27.5253C-0.122122 29.3768 -0.0607697 30.9684 0.395 32.3001C0.820025 33.5867 1.6212 34.7242 2.70014 35.573C3.8731 36.467 5.23412 37.0973 6.68593 37.4189C8.39916 37.8095 10.1579 37.9776 11.9163 37.9188C14.44 37.8522 16.9441 37.4673 19.3664 36.7737C21.8642 36.065 24.1825 34.8548 26.1722 33.2209C26.1152 33.8212 25.6551 35.7311 25.6836 36.308C25.7055 36.8848 25.6836 37.5236 25.8787 38C25.8787 38 39.5714 37.9273 55.622 37.9273C64.0953 37.9273 66.4443 29.1874 66.4443 29.1874H44.4468C44.4468 29.1874 63.0589 14.9441 66.8496 7.86191C67.7984 6.08874 68 0.0149572 68 0.0149572H29.2991C29.1413 0.00427414 28.909 0 28.6198 0H28.6242ZM40.8774 9.74409C40.9387 9.40226 40.9825 9.07536 41.0132 8.75494H52.9246C52.9246 8.75494 45.7331 14.6172 38.971 20.4987L40.8774 9.73768V9.74409ZM12.8651 29.9757C12.247 29.9508 11.6381 29.8207 11.0661 29.5911C10.8537 29.5093 10.6608 29.3856 10.4995 29.228C10.3381 29.0703 10.2118 28.882 10.1283 28.6747C9.98222 28.2701 10.0414 27.7574 10.3058 27.1364C10.5728 26.5035 10.986 25.9391 11.5132 25.4871C12.0525 25.0268 12.655 24.6421 13.3034 24.3442C14.0229 24.0137 14.7726 23.7497 15.5428 23.5558C16.3579 23.3437 17.1723 23.1642 17.9859 23.0175C18.8464 22.8751 19.7001 22.7412 20.5474 22.6158C21.3962 22.4962 22.2142 22.363 23.0016 22.2163C23.7904 22.0711 24.5354 21.9023 25.2563 21.7143C25.9133 21.549 26.548 21.3088 27.1473 20.9986L26.0211 23.5964C25.7675 24.1413 25.4792 24.67 25.1577 25.1795C24.6658 25.9365 24.0526 26.6116 23.3412 27.1792C22.3867 27.9354 21.3179 28.5429 20.1728 28.9801C18.858 29.5071 17.1934 29.8361 15.179 29.9672C14.7408 29.9949 14.331 30.0077 13.9279 30.0077C13.5619 30.0077 13.2048 30.0077 12.8607 29.9736L12.8651 29.9757Z" fill="#EF4E23"/>
+                    </svg>
+                    <svg class="path_merit" width="121" height="41" viewBox="0 0 121 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 40V10.6048H3.52032V14.4758H4.24835C4.85516 13.3871 5.82633 12.379 7.16186 11.4516C8.4967 10.4838 10.3989 10 12.867 10C15.254 10 17.1763 10.5443 18.633 11.6331C20.13 12.7218 21.2023 14.0323 21.8493 15.5645H22.578C23.2658 14.0323 24.3381 12.7218 25.7949 11.6331C27.251 10.5443 29.2944 10 31.9246 10C33.948 10 35.7075 10.4234 37.2051 11.2701C38.702 12.0766 39.8755 13.2258 40.7254 14.7178C41.5747 16.1693 42 17.8831 42 19.8589V40H38.3578V20.2218C38.3578 18.125 37.7108 16.4516 36.4161 15.2016C35.1616 13.9113 33.3814 13.2661 31.0747 13.2661C28.7278 13.2661 26.7654 14.0323 25.1874 15.5645C23.6094 17.0565 22.8204 19.254 22.8204 22.1573V40H19.1789V20.2218C19.1789 18.125 18.5319 16.4516 17.2365 15.2016C15.9828 13.9113 14.2025 13.2661 11.8958 13.2661C9.54892 13.2661 7.58649 14.0323 6.00851 15.5645C4.43053 17.0565 3.64154 19.254 3.64154 22.1573V40H0Z" fill="white"/>
+                        <path d="M60.1728 41C57.1136 41 54.4421 40.3768 52.158 39.1303C49.9144 37.8437 48.1611 36.0545 46.8965 33.7626C45.6319 31.4708 45 28.8372 45 25.8619V25.1381C45 22.1226 45.6319 19.489 46.8965 17.2373C48.1611 14.9455 49.8942 13.1764 52.0966 11.93C54.3401 10.6433 56.8895 10 59.7447 10C62.5183 10 64.965 10.583 67.0864 11.749C69.2482 12.8748 70.9409 14.5233 72.1642 16.6946C73.3876 18.8255 74 21.3787 74 24.354V26.284H48.6708C48.793 29.9429 49.9144 32.7775 52.0358 34.7879C54.1977 36.7581 56.9097 37.7432 60.1728 37.7432C62.9463 37.7432 65.0879 37.1199 66.5969 35.8736C68.1464 34.6271 69.3292 33.0992 70.1455 31.2899L73.4491 32.7373C72.8374 34.0642 71.9806 35.3709 70.8794 36.6576C69.8187 37.904 68.432 38.9494 66.7191 39.7937C65.0062 40.5979 62.8241 41 60.1728 41ZM48.7316 23.1479H70.2677C70.1043 19.9714 69.0646 17.5389 67.1471 15.8502C65.2304 14.1213 62.7627 13.2568 59.7447 13.2568C56.7666 13.2568 54.2996 14.1213 52.3416 15.8502C50.3837 17.5389 49.1806 19.9714 48.7316 23.1479Z" fill="white"/>
+                        <path d="M77 40V11.1188H80.3145V14.7438H80.9999C81.5334 13.4365 82.3147 12.4857 83.3432 11.8914C84.4096 11.2971 85.8764 11 87.7429 11H91V14.3279H87.3431C85.2476 14.3279 83.5715 14.942 82.3147 16.1701C81.0573 17.3982 80.4286 19.3197 80.4286 21.9344V40H77Z" fill="white"/>
+                        <path d="M93 40V11H97V40H93Z" fill="white"/>
+                        <path d="M111.943 40C110.394 40 109.222 39.6008 108.428 38.8024C107.673 38.004 107.295 36.8862 107.295 35.4491V14.1317H98V10.8982H107.295V0H110.87V10.8982H121V14.1317H110.87V34.9701C110.87 36.1677 111.466 36.7665 112.658 36.7665H119.451V40H111.943Z" fill="white"/>
+                        <path d="M92.8652 8.13466C93.4421 8.7116 94.1539 9 95 9C95.885 9 96.5961 8.7116 97.1348 8.13466C97.7116 7.55772 98 6.84617 98 6.00001C98 5.11539 97.7116 4.40385 97.1348 3.86538C96.5961 3.28846 95.885 3 95 3C94.1539 3 93.4421 3.28846 92.8652 3.86538C92.2884 4.40385 92 5.11539 92 6.00001C92 6.84617 92.2884 7.55772 92.8652 8.13466Z" fill="#EF4E23"/>
+                    </svg>
+                </a>
+            </li>
+
+            <li class="itemlista">
+                <a class="itemmenu" href="home.php">
+                    <svg class="icon" width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="pathicon" d="M0 23V7.66667L10 0L20 7.66667V23H12.5V14.0556H7.5V23H0Z" fill="white"/>
+                    </svg>
+                    <span class="textoicon">Home</span>
+                </a>
+            </li>
+
+            <li class="itemlista">
+                <a class="itemmenu" href="banco.php">
+                    <svg class="icon" width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="pathicon" d="M21.25 0H1.25V2.5H21.25V0ZM22.5 12.5V10L21.25 3.75H1.25L0 10V12.5H1.25V20H13.75V12.5H18.75V20H21.25V12.5H22.5ZM11.25 17.5H3.75V12.5H11.25V17.5Z" fill="white"/>
+                    </svg>
+                    <span class="textoicon">Banco AZcoin</span>
+                </a>
+            </li>
+
+            <li class="itemlista">
+                <a class="itemmenu" href="Envio.php">
+                    <svg class="icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="pathicon" d="M24.5137 0.48642C24.3117 0.276417 24.0557 0.126137 23.7739 0.052076C23.4921 -0.0219852 23.1954 -0.0169642 22.9163 0.0665877L1.19403 6.20081C0.872347 6.28851 0.585536 6.47331 0.372702 6.73001C0.159868 6.98671 0.0313702 7.30282 0.00472773 7.63524C-0.0204278 7.96632 0.0552194 8.29726 0.221716 8.58452C0.388212 8.87178 0.637756 9.1019 0.937513 9.24459L10.9183 13.9677C10.968 13.994 11.0086 14.0346 11.0349 14.0843L15.7571 24.067C15.8868 24.347 16.0943 24.5839 16.3547 24.7493C16.6152 24.9147 16.9177 25.0017 17.2263 25H17.3662C17.6986 24.9733 18.0146 24.8448 18.2713 24.6319C18.5279 24.4191 18.7127 24.1322 18.8004 23.8104L24.9334 2.08412C25.017 1.80494 25.022 1.50814 24.9479 1.22629C24.8739 0.94445 24.7236 0.688459 24.5137 0.48642ZM23.5809 1.69927L17.4595 23.4256C17.4511 23.475 17.4254 23.5198 17.3869 23.5519C17.3484 23.584 17.2997 23.6012 17.2496 23.6005C17.2037 23.6066 17.1571 23.5973 17.117 23.5741C17.077 23.5509 17.0457 23.5151 17.0281 23.4723L12.3641 13.6295L17.2962 8.69648C17.4277 8.56503 17.5015 8.38674 17.5015 8.20084C17.5015 8.01494 17.4277 7.83666 17.2962 7.70521C17.1648 7.57376 16.9866 7.49991 16.8007 7.49991C16.6148 7.49991 16.4366 7.57376 16.3052 7.70521L11.3731 12.6382L1.53216 7.97343C1.48934 7.95582 1.45355 7.92454 1.43035 7.88447C1.40715 7.84439 1.39786 7.79777 1.40391 7.75186C1.40321 7.70175 1.42045 7.65304 1.45253 7.61454C1.48461 7.57604 1.5294 7.55029 1.5788 7.54194L23.301 1.41938H23.371C23.4 1.41847 23.4287 1.42432 23.4551 1.43646C23.4814 1.44861 23.5045 1.46672 23.5226 1.48935C23.5506 1.51566 23.5708 1.54914 23.5811 1.58615C23.5914 1.62317 23.5913 1.66229 23.5809 1.69927Z" fill="white"/>
+                    </svg>                    
+                    <span class="textoicon">Enviar AZcoins</span>
+                </a>
+            </li>
+
+            <li class="itemlista" id="submenuButton"> <!--onclick="abrirSubMenu()"-->
+                <a class="cadastrar" href="#" id="cadastrar"> 
+                    <svg class="icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="pathicon" d="M23.9585 6.31579C23.5742 6.82105 23.0617 7.2 23.0617 7.57895C23.0617 7.95789 23.4461 8.33684 23.8304 8.8421C24.471 9.47368 25.1116 9.97895 24.9835 10.6105C24.9835 11.2421 24.3429 11.8737 23.7023 12.5053L18.4494 17.6842L16.6557 16.0421L22.0367 10.7368L20.7555 9.47368L18.9618 11.2421L14.0933 6.4421L19.2181 1.64211C19.7306 1.13684 20.4993 1.13684 21.0118 1.64211L23.9585 4.54737C24.471 5.05263 24.471 5.93684 23.9585 6.31579ZM1.28121 19.2L13.5808 7.07368L18.3212 11.8737L6.14979 24H1.28121V19.2ZM6.40603 0V3.78947H10.2496V6.31579H6.40603V10.1053H3.84362V6.31579H0V3.78947H3.84362V0H6.40603Z" fill="white"/>
+                    </svg>    
+                    <span class="textoicon">Usuários</span>
+                    <span class="setabaixo rotate">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);">
+                            <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                        </svg>
+                    </span>
+                </a>
+                <div class="submenudiv">
+                    <ul class="submenu">
+                        <li>
+                            <a href="cadastrousuario.php">
+                                <span>
+                                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 18H7.49866H0C0.028361 16.6154 1.12291 12.4615 7.49854 12.4615C13.8742 12.4615 15 16.6154 15 18ZM7.49854 9.42068C8.81101 9.42068 10.0697 8.92441 10.9977 8.04105C11.9258 7.15769 12.4471 5.9596 12.4471 4.71034C12.4471 3.46108 11.9258 2.26299 10.9977 1.37963C10.0697 0.496266 8.81101 0 7.49854 0C6.18608 0 4.92743 0.496266 3.99937 1.37963C3.07132 2.26299 2.54997 3.46108 2.54997 4.71034C2.54997 5.9596 3.07132 7.15769 3.99937 8.04105C4.92743 8.92441 6.18608 9.42068 7.49854 9.42068Z" fill="white"/>
+                                        <path d="M16.375 7.625V5H14.625V7.625H12V9.375H14.625V12H16.375V9.375H19V7.625" fill="white"/>
+                                    </svg>
+                                </span>
+                                <span class="textosub">Novo Usuário</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="home.php">
+                                <span>
+                                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="pathicon" d="M16.375 7.625V5H14.625V7.625H12V9.375H14.625V12H16.375V9.375H19V7.625" fill="white"/>
+                                        <path class="pathicon" d="M7.08182 11.25C3.805 11.25 0 12.9962 0 16V18H14V16C14 12.9962 10.3586 11.25 7.08182 11.25ZM7.08182 9C8.38379 9 9.63244 8.5259 10.5531 7.68198C11.4737 6.83807 11.9909 5.69347 11.9909 4.5C11.9909 3.30653 11.4737 2.16193 10.5531 1.31802C9.63244 0.474106 8.38379 0 7.08182 0C5.77985 0 4.5312 0.474106 3.61057 1.31802C2.68993 2.16193 2.17273 3.30653 2.17273 4.5C2.17273 5.69347 2.68993 6.83807 3.61057 7.68198C4.5312 8.5259 5.77985 9 7.08182 9Z" fill="white"/>
+                                    </svg>
+                                </span>
+                                <span class="textosub">Listar Usuários</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="itemlista">
+                <a class="itemmenu" href="feedbacks.php">
+                    <svg class="icon" width="29" height="32" viewBox="0 0 29 32" fill="none" xmlns="http://www.w3.org/2000/svg">       
+                        <path class="pathicon" d="M27.5102 22.0792C27.1547 21.8034 26.7408 21.614 26.3008 21.5257C25.8609 21.4373 25.4066 21.4525 24.9734 21.5699L19.9761 22.7282C20.0923 22.2331 20.0959 21.7179 19.9866 21.2211C19.8772 20.7244 19.6578 20.259 19.3446 19.86C19.0315 19.4609 18.6329 19.1385 18.1786 18.9168C17.7243 18.6951 17.2261 18.58 16.7214 18.5801H10.7423C10.2402 18.5788 9.74277 18.6779 9.27884 18.8715C8.81492 19.0652 8.39365 19.3496 8.03939 19.7083L5.3377 22.4332H1.91101C1.40418 22.4332 0.918107 22.6362 0.559723 22.9975C0.201338 23.3588 0 23.8488 0 24.3598L0 29.1762C0 29.6872 0.201338 30.1772 0.559723 30.5385C0.918107 30.8998 1.40418 31.1028 1.91101 31.1028H14.3326C14.4107 31.1028 14.4886 31.0931 14.5643 31.0739L22.2084 29.1473C22.2571 29.1356 22.3047 29.1195 22.3505 29.0992L26.9931 27.1076L27.0456 27.0835C27.4918 26.8587 27.8739 26.5231 28.1559 26.1084C28.4378 25.6936 28.6104 25.2133 28.6574 24.7126C28.7044 24.212 28.6241 23.7076 28.4243 23.2469C28.2244 22.7862 27.9115 22.3843 27.515 22.0792H27.5102ZM1.91101 24.3598H4.77753V29.1762H1.91101V24.3598ZM26.2084 25.3484L21.6697 27.2966L14.2132 29.1762H6.68855V23.7951L9.39144 21.0714C9.56825 20.8917 9.77872 20.7493 10.0106 20.6523C10.2425 20.5554 10.4912 20.5059 10.7423 20.5067H16.7214C17.1015 20.5067 17.466 20.6589 17.7348 20.9299C18.0036 21.2008 18.1546 21.5684 18.1546 21.9516C18.1546 22.3348 18.0036 22.7023 17.7348 22.9733C17.466 23.2443 17.1015 23.3965 16.7214 23.3965H13.3771C13.1237 23.3965 12.8806 23.498 12.7014 23.6787C12.5223 23.8593 12.4216 24.1043 12.4216 24.3598C12.4216 24.6153 12.5223 24.8603 12.7014 25.041C12.8806 25.2216 13.1237 25.3231 13.3771 25.3231H17.1991C17.271 25.3229 17.3427 25.3148 17.4129 25.299L25.4153 23.4435L25.4523 23.4338C25.6966 23.3655 25.9573 23.3906 26.1844 23.5044C26.4114 23.6182 26.5886 23.8126 26.682 24.0502C26.7754 24.2878 26.7783 24.5518 26.6902 24.7915C26.6021 25.0312 26.4292 25.2295 26.2048 25.3484H26.2084Z" fill="white"/>
+                        <path class="pathicon" d="M7.66194 4.18655C7.66194 3.07621 8.10354 2.01134 8.88958 1.22621C9.67562 0.441083 10.7417 7.20925e-08 11.8533 7.20925e-08C13.3516 7.20925e-08 14.7081 0.639402 15.7704 1.87557C16.1789 2.35969 16.5279 2.89252 16.8068 3.46189C17.0857 2.891 17.4333 2.35817 17.8433 1.87253C18.9041 0.639402 20.2605 7.20925e-08 21.7603 7.20925e-08C22.4777 -0.000132898 23.1832 0.183678 23.8092 0.533835C24.4351 0.883992 24.9606 1.38878 25.3353 1.99986C25.7101 2.61095 25.9215 3.30788 25.9493 4.02394C25.9772 4.74 25.8206 5.45123 25.4945 6.08952H26.3328C27.8051 6.08952 29 7.28307 29 8.75369V11.7984C29 12.8611 28.3766 13.7791 27.4759 14.2068V22.1974L19.4432 23.5228L17.5241 20.4661L12.6875 19.733L6.1378 21.6939V14.2068C5.23702 13.7775 4.61365 12.8611 4.61365 11.7984V8.75369C4.61365 7.28307 5.80858 6.08952 7.28091 6.08952H8.11919C7.82655 5.51863 7.66194 4.87162 7.66194 4.18655ZM15.6637 14.4626H8.42402V19.7611L12.1932 18.6193L15.6637 19.3432C15.6637 16.3706 15.6637 17.4352 15.6637 14.4626ZM17.9499 14.4626V19.7611L19.1976 20.6452L19.9375 22.8637L25.1896 21.6939V14.4626H17.9499ZM17.9499 8.37309V12.179H26.3328C26.4338 12.179 26.5307 12.1389 26.6022 12.0676C26.6736 11.9962 26.7138 11.8994 26.7138 11.7984V8.75369C26.7138 8.65275 26.6736 8.55594 26.6022 8.48456C26.5307 8.41319 26.4338 8.37309 26.3328 8.37309H17.9499ZM7.28091 8.37309C7.17985 8.37309 7.08293 8.41319 7.01147 8.48456C6.94001 8.55594 6.89987 8.65275 6.89987 8.75369V11.7984C6.89987 12.0085 7.07057 12.179 7.28091 12.179H15.6637V8.37309H7.28091ZM11.8533 2.28357C11.3481 2.28357 10.8635 2.48406 10.5062 2.84094C10.1489 3.19782 9.94816 3.68185 9.94816 4.18655C9.94816 4.69124 10.1489 5.17528 10.5062 5.53215C10.8635 5.88903 11.3481 6.08952 11.8533 6.08952H15.3726C15.0175 4.84422 14.5465 3.95666 14.0344 3.35989C13.379 2.59566 12.6398 2.28357 11.8533 2.28357ZM18.2411 6.08952H21.7603C22.2656 6.08952 22.7502 5.88903 23.1075 5.53215C23.4648 5.17528 23.6655 4.69124 23.6655 4.18655C23.6655 3.68185 23.4648 3.19782 23.1075 2.84094C22.7502 2.48406 22.2656 2.28357 21.7603 2.28357C20.9738 2.28357 20.2362 2.59566 19.5808 3.35989C19.0671 3.95666 18.5962 4.84422 18.2411 6.08952Z" fill="white"/>
+                    </svg>
+                    <span class="textoicon">Avaliações</span>
+                </a>
+            </li>
+
+            <li class="itemlista">
+                <a class="itemmenu" href="home.php">
+                    <svg class="icon" width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="pathicon" d="M2.34375 1.17857V19.6429H23.8281C24.1389 19.6429 24.437 19.767 24.6568 19.9881C24.8765 20.2091 25 20.5089 25 20.8214C25 21.134 24.8765 21.4338 24.6568 21.6548C24.437 21.8758 24.1389 22 23.8281 22H1.17188C0.861074 22 0.563003 21.8758 0.343234 21.6548C0.123465 21.4338 0 21.134 0 20.8214L0 1.17857C0 0.865995 0.123465 0.566221 0.343234 0.345196C0.563003 0.124171 0.861074 0 1.17188 0C1.48268 0 1.78075 0.124171 2.00052 0.345196C2.22028 0.566221 2.34375 0.865995 2.34375 1.17857ZM24.6562 5.15429L16.4531 13.4043C16.2334 13.625 15.9355 13.749 15.625 13.749C15.3145 13.749 15.0166 13.625 14.7969 13.4043L10.9375 9.52286L6.6875 13.7971C6.46522 14.0052 6.17139 14.1185 5.86776 14.1132C5.56414 14.108 5.27438 13.9845 5.05937 13.7689C4.84493 13.5526 4.72219 13.2612 4.71694 12.9558C4.7117 12.6505 4.82436 12.355 5.03125 12.1314L10.1094 7.02429C10.3291 6.80358 10.627 6.67961 10.9375 6.67961C11.248 6.67961 11.5459 6.80358 11.7656 7.02429L15.625 10.9057L23 3.48857C23.2223 3.2805 23.5161 3.1672 23.8197 3.17247C24.1234 3.17774 24.4131 3.30119 24.6281 3.51686C24.8426 3.73309 24.9653 4.02451 24.9706 4.32987C24.9758 4.63522 24.8631 4.93073 24.6562 5.15429Z" fill="white"/>
+                    </svg>                        
+                    <span class="textoicon">Painel AZcoin</span>
+                </a>
+            </li>
+        </ul>
+        <div class="logout_div">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(239, 78, 35, 0.6)" />
+                  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(239, 78, 35, 0.8)" />
+                  <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(239, 78, 35)" />
+                </g>
+            </svg>
+            <div class="boxlogout">
+                <a class="itemlogout" href="../../telaLogin.php">
+                    <svg class="iconlogout" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.61538 0H14.3846C15.0783 0 15.7435 0.273928 16.234 0.761522C16.7245 1.24912 17 1.91044 17 2.6V5.2H14.3846V2.6H2.61538V23.4H14.3846V20.8H17V23.4C17 24.0896 16.7245 24.7509 16.234 25.2385C15.7435 25.7261 15.0783 26 14.3846 26H2.61538C1.92174 26 1.25651 25.7261 0.766028 25.2385C0.275549 24.7509 0 24.0896 0 23.4V2.6C0 1.91044 0.275549 1.24912 0.766028 0.761522C1.25651 0.273928 1.92174 0 2.61538 0Z" fill="white" fill-opacity="0.8"/>
+                        <path d="M15.4533 18.167L17.3333 20L24 13.5L17.3333 7L15.4533 8.833L18.8933 12.2H6V14.8H18.8933L15.4533 18.167Z" fill="white" fill-opacity="0.8"/>
+                    </svg>
+                    <span class="textologout">LogOut</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="menuabertomobile"></div>
+    </nav>
+    <!--CABEÇALHO-->
+    <header class="cabecalho">
+        <div class="user_box">
+            <span class="nome_user">Gestor Humano</span>
+            <a href="home.php"><img class="img_user" src="img/Gestor.png" alt=""></a>
+        </div>
+        <div class="tela_atual"><span>Criar Campanha</span></div>
+    </header>       
+
     <div class="tudo">
         <div class="painel-principal">
             <img class="moeda" src="img/0099.png" alt="">
             <h1 class="multiplicador">Total: 99999</h1>
-            <img class="boneco" src="img/Boneco.png" alt="Carregando...">
-
+            <img class="boneco" src="img/Boneco.png" alt="Carregando...">                  
             <div class="caixa-input">
-            
-                <input required="" name="nome_campanha" id="nome_campanha" type="text" class="input">
+                <input required="" name="nome_campanha" id="input-nome" type="text" class="input">
                 <label class="label">
                     <span class="label-letra" style="--index: 0">N</span>
                     <span class="label-letra" style="--index: 1">o</span>
@@ -45,11 +179,9 @@
                     376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
                 </svg>
             </div>
-
-            <hr class="linha1">
-
+                <hr class="linha1">
             <div class="caixa-input2">
-                <input required="" type="text" class="input" name="qde_az_por_colaborador" id="qde_az_por_colaborador">
+                <input required="" type="text" class="input" name="Quantidade_AZMerits" id="input-quantidade">
                 <label class="label">
                     <span class="label-letra" style="--index: 1">A</span>
                     <span class="label-letra" style="--index: 2">Z</span>
@@ -77,118 +209,57 @@
                     <span class="label-letra" style="--index: 24">:</span>
                 </label>  
             </div>
-
-            <hr class="linha2">
+            <hr class="linha2"> 
             
-            <div class="posicao-data">
-                <form class="data">
-                    <label for="data" class="lb">Data de início:</label>
-                    <input name="data_inicio" id="data_inicio" type="date" class="infos data">
-                    <input class="infos hora" type="time" name="hora_inicio" id="hora_inicio">       
-                </form>
-                <form class="data">
-                    <label for="data" class="lb">Data de término:</label>
-                    <input name="data_final" id="data_final" type="date" class="infos data">
-                    <input name="hora_final" id="hora_final" type="time" class="infos hora">
-                </form>
-            </div>
-
-            <div class="botoes">                  
-                <button type="submit" name="iniciar" id="letra-botao"  class="custom-btn btn-1" onclick="window.location.reload()">Iniciar Campanha</button>
-                <button type="submit" name="cancelar" id="letra-botao" class="custom-btn btn-1" onclick="window.location.reload()">Cancelar</button>
-                <!--Modal do editar-->
-                <div id="fade" class="hide"></div>
-
-                <div id="modal" class="hide">
-
-                    <div class="cabeçalho-modal">
-                        <h2 class="titulo-modal">Campanhas:</h2>  
-                        <hr class="linha3"> 
-                    </div>
-
-                    <div class="modal-body"> 
-                        
-                        <nav class="interior">
-                            <p class="conteudo-modal">
-                                Primavera verão
-                            </p>
-                            <a id="editar" href="Envio.php"><i class="fa-regular fa-pen-to-square"></i></i></a>
-                        </nav>                
-                        <nav class="interior">
-                            <p class="conteudo-modal">
-                                Outono e inverno 
-                            </p>
-                            <a id="editar" href="Envio.php"><i class="fa-regular fa-pen-to-square"></i></a>
-                        </nav>
-                        <nav class="interior">
-                            <p class="conteudo-modal">
-                                Natal Feliz 
-                            </p>
-                            <a id="editar" href="Envio.php"><i  class="fa-regular fa-pen-to-square"></i></a>
-                        </nav>
-                    </div>
-
-                    <button id="close-modal" class="custom-btn btn-1">Fechar</button>
-
+        <div class="posicao-data">
+            <form class="data">
+                <label for="data" class="lb">Data de início:</label>
+                <input name="data_inicio" id="data" type="date" class="infos">       
+            </form>
+            <form class="data">
+                <label for="data" class="lb">Data de término:</label>
+                <input name="data_fim" id="data" type="date" class="infos">       
+            </form>
+        </div>
+        <div class="botoes">  
+            <button type="submit" name="iniciar" value="Iniciar Campanha" id="interior-botao" class="custom-btn btn-1"><a class="letra-botao" href="Envio.html" method="POST">Iniciar Campanha</button>
+                <button type="submit" name="cancelar" value="Cancelar" id="interior-botao" class="custom-btn btn-1"><a class="letra-botao" method="POST">Cancelar</button>
+                    <!--Modal do editar-->
+            <div id="fade" class="hide"></div> 
+            <div id="modal" class="hide">
+                <div class="cabeçalho-modal">
+                    <h2 class="titulo-modal">Campanhas:</h2>  
+                    <hr class="linha3"> 
                 </div>
-
-            </div>
-            
+                <div class="modal-body"> 
+                    <nav class="interior">
+                        <p class="conteudo-modal">
+                            Primavera verão
+                        </p>
+                        <a id="editar" href="Envio.html"><i  class="fa-regular fa-pen-to-square"></i></a>
+                    </nav>                
+                    <nav class="interior">
+                        <p class="conteudo-modal">
+                            Outono e inverno 
+                        </p>
+                        <a id="editar" href="Envio.html"><i  class="fa-regular fa-pen-to-square"></i></a>
+                    </nav>
+                    <nav class="interior">
+                        <p class="conteudo-modal">
+                            Natal Feliz 
+                        </p>
+                        <a id="editar" href="Envio.html"><i  class="fa-regular fa-pen-to-square"></i></a>
+                    </nav>
+                </div>
+                <button id="close-modal" class="custom-btn btn-1">Fechar</button>
+            </div> 
+        </div>
         </div>            
     </div>
+    <footer class="rodape"><p>2023 © AZ Tecnologia em Gestão. Todos os direitos reservados.</p></footer>
 
     <script src="script.js"></script>
     <script src="modal.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
-
-<?php
-    if(isset($_POST['id_campanha']))
-    {
-        $id_campanha = addslashes($_POST['id_campanha']);
-        $nome_campanha = addslashes($_POST['nome_campanha']);
-        $qde_az_por_colaborador = addslashes($_POST['qde_az_por_colaborador']);
-        $id_carteira = addslashes($_POST['id_carteira']);
-        $saldo_distr = addslashes($_POST['saldo_distr']);
-        $data_inicio = addslashes($_POST['data_inicio']);
-        $hora_inicio = addslashes($_POST['hora_inicio']);                
-        $data_final = addslashes($_POST['data_final']);        
-        $hora_final = addslashes($_POST['hora_final']);        
-        if(!empty($id_campanha)&& !empty($nome_campanha)&& !empty($qde_az_por_colaborador)&& !empty($id_carteira)&& !empty($saldo_distr)&& !empty($data_inicio)&& !empty($hora_inicio)&& !empty($data_final)&& !empty($hora_final) )
-        {           
-            {
-                if($data_inicio!=$data_final)
-                {
-                    if($usuario->campanha($id_campanha, $nome_campanha, $qde_az_por_colaborador, $id_carteira, $saldo_distr, $data_inicio, $hora_inicio, $data_final, $hora_final))
-                    {
-                        ?>
-                            <div>
-                                <p> Campanha Cadastrada com sucesso</p>
-                                <a href="Envio.php">Iniciar</a>
-                            </div>
-                        <?php
-                    }
-                    else
-                    {
-                        ?>
-                            <div>
-                                <p> Campanha já Cadastrada</p>
-                                <a href="Envio.php"></a>
-                            </div>
-                        <?php
-                    }
-                }
-                else
-                {
-                    ?>
-                        <div>
-                            <p>Data inicial e Datal final são iguais, por favor selecione datas diferentes.</p>
-                        </div>
-                    <?php
-                }
-            }
-
-        }
-    }
-?>
