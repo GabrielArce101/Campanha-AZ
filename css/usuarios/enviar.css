@@ -1,0 +1,296 @@
+/*Propriedades da Tela Renes*/
+.tela-enviar-az-coins{
+    position: fixed;
+    width: auto;
+    left: 300px;
+    right: 50px;
+    height: auto;
+    top: 140px;
+    bottom: 40px;
+    background-color: rgba(217, 217, 217, .44);
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px 20px 20px;
+    justify-content: space-around;
+    gap: 20px;
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.tela-enviar-az-coins .div1{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 20px;
+}
+.tela-enviar-az-coins .div1 .boneco{
+    width: 80%;
+}
+/*CARTAO AZMERIT*/
+.tela-enviar-az-coins .flip-card {
+    display: flex;
+    background-color: transparent;
+    width: 280px;
+    height: 170px;
+    color: white;
+}
+.tela-enviar-az-coins .wrap-enviar{
+    display: flex;
+    background-color:rgb(0, 36, 54);
+    width: 300px;
+    height: 520px;
+    border-radius: 20px;
+    padding: 20px;
+    align-self: center;
+}
+.tela-enviar-az-coins .wrap-enviar .enviar-form{
+    width: 100%;
+    align-items: center;
+    margin: auto;
+}
+.tela-enviar-az-coins .wrap-input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.tela-enviar-az-coins .wrap-enviar .wrap-input .btn-enviar-para{
+    display: flex;
+    background-color: transparent ;
+    margin-top: 20;
+}
+textarea{
+    width: 255px;
+    padding: 2px;
+    color: white;
+    border: 1px solid;
+    background-color:rgb(0, 36, 54);
+    font-size: px;
+    margin-top: 15px;
+}
+.input-form{
+    background-color: blue;
+}
+
+
+
+.tela-enviar-az-coins .input-form{
+    font-size: 18px;
+    color: rgb(240, 236, 236);
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    margin-top: 0;
+}
+.tela-enviar-az-coins .focus-input-form{
+    width: 100%;
+    pointer-events: none;
+    top: 0;
+    margin-bottom: 0;
+    margin-top: 25px;
+}
+.tela-enviar-az-coins .focus-input-form::after{
+    font-size: 18px;
+    color: white;
+    content: attr(data-placeholder);
+    width: 100%;
+    padding-left: 5px;
+    z-index: 1;
+}
+.tela-enviar-az-coins .container-enviar-form-btn{
+    width: 100%;
+    display: flex;
+    justify-content:right;
+    margin-top: 10px;
+}
+.tela-enviar-az-coins .enviar-form-btn{
+    font-size: 16px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+    height: 30px;
+    border-radius: 15px;
+    transition: all 0.4s;
+    background-color: rgb(242, 93, 39);
+    color: white;
+}
+
+.heading_8264 {
+    position: absolute;
+    letter-spacing: .2em;
+    font-size: 12px;
+    top: 2em;
+    left: 16.6em;
+}
+.logo {
+    width: 30px;
+    position: absolute;
+    top: 6.8em;
+    left: 13.7em;
+}
+.chip {
+    position: absolute;
+    top: 2.3em;
+    left: 1.5em;
+}
+.contactless {
+    position: absolute;
+    top: 3.5em;
+    left: 12.4em;
+}
+.valid_thru {
+    position: absolute;
+    font-weight: bold;
+    bottom: 3px;
+    font-size: 12px;
+    left: 1em;
+    top: 85px;
+}
+.date_8264 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 12px;
+    top: 13.6em;
+    left: 3.2em;
+    top: 100px;
+}
+.name {
+    position: absolute;
+    font-weight: bold;
+    font-size: 14px;
+    bottom: 3px;
+    left: 1em;
+    top: 130px;
+}
+.strip {
+    position: absolute;
+    background-color: black;
+    width: 15em;
+    height: 1.5em;
+    top: 2.4em;
+    background: repeating-linear-gradient(
+      45deg,
+      #303030,
+      #303030 10px,
+      #202020 10px,
+      #202020 20px
+    );
+}
+.mstrip {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 8em;
+    height: 2em;
+    top: 5em;
+    left: .8em;
+    border-radius: 2.5px;
+}
+.saldo {
+    position: absolute;
+    font-weight: bold;
+    font-size: 14px;
+    bottom: 30px;
+    left: 1em;
+    color: white !important;
+    top: 100px;
+}
+.sstrip {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 25px;
+    top: 100px;
+    left: 65px;
+    border-radius: 2.5px;
+}
+.code {
+    font-weight: bold;
+    text-align: center;
+    margin: .2em;
+    color: rgb(219, 16, 16);
+}
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgb(0, 36, 54);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;    
+}
+.flip-card-front {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+    background-color: rgb(0, 36, 54);
+}
+.flip-card-back {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+    background-color: rgb(0, 36, 54);
+    transform: rotateY(180deg);
+}
+/*Propriedades da Barra de Rolagem*/
+/*width*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track{
+    background: none;
+}
+/* Handle */
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: var(--cor-laranja-az);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+    background: var(--cor-laranja-az);
+}
+
+/*Configurações do Site Responsivo*/
+/* Configurações do Site Responsivo */
+@media only screen and (max-width: 768px) {
+    .tela-enviar-az-coins {
+        left: 100px; /* Ajuste o valor de acordo com sua preferência */
+        right: 20px; /* Ajuste o valor de acordo com sua preferência */
+        padding: 40px 10px 20px 10px;
+    }
+
+    .flip-card-front, .flip-card-back {
+        top: 0;
+    }
+    .tela-enviar-az-coins .boneco{
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    .flip-card-front, .flip-card-back {
+        top: 0;
+    }
+    .tela-enviar-az-coins .boneco{
+        display: none;   
+    }
+}

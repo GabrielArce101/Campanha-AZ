@@ -1,0 +1,567 @@
+:root{
+    /*Cores*/
+    --cor-fundo-menu: rgb(0, 36, 54);
+    --cor-laranja-az: rgb(239, 78, 35);
+    /*Transições*/
+    --tran-menu: 0.5s all ease;
+    /*Tamanho de fontes*/
+    --tamanho-fonte-titulo-tela: 20px;
+    --tamanho-fonte-span-input: 16px;
+    --tamanho-fonte-titulo-card: 18px;
+    --escrita-cliente-tamanho-fonte-texto-input: 14px;
+    /* Paleta de cores AZ */
+    --cor-branca-para-fundos-escuros: rgb(255,255,255);
+    --cor-laranja-fraco-para-texto: rgb(215, 91, 54);
+    --cor-azul-escuro-para-caixas-dentro-site: rgb(23,61,87);
+    --cor-azul-escuro-para-fundos-site: rgb(0,36,54);
+    --cor-cinza-apagado: rgba(217, 217, 217, 0.30);
+    --cor-cinza: rgb(217,217,217);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tomorrow', serif;
+}
+
+.bari{
+    width: 100vw;
+    height: 75%;
+    /* margin-left: 25%; */
+}
+
+/* MOLDURA fundo */
+.caixa-geral-feedbak-colaborador-1{
+    width: auto;
+    height: auto;
+    left: 18%; /*300px; */
+    right: 1%; /*50px; */
+    top: 10%;
+    bottom: 5%;
+    background-color: var(--cor-cinza-apagado);
+    border-radius: 10px;
+    margin: 3% auto 2% 0%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 10px;
+    justify-content: center;
+}
+
+/* Fundo da moldura */
+.conteudo-feedbacks-colaborador-1{
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    justify-content: center; /*jv center; */
+    background-color: gray;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 1;
+    gap: 3%;
+}
+/* BARRA DE ROLAGEM - LATERAL DIREITA */
+.conteudo-feedbacks-colaborador-1::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--cor-cinza);
+    border-radius: 10px;
+}
+.conteudo-feedbacks-colaborador-1::-webkit-scrollbar-thumb{
+    background-color: var(--cor-laranja-az);
+    border-radius: 10px;
+}
+
+/* Box card */
+.container-card-1{
+    height: 370px;
+    width: 290px;
+    perspective: 800px;
+    margin: 5% 2% 5% 2%; /*10px 10px 7px 10px;*/
+}
+.container-card-1:hover > .card-1{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.card-1{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+/* Frente do card */
+.card-frente-1{
+    display: flex;
+    flex-direction: column;
+    /* adicionado 2 linhas */
+    background-color: var(--cor-azul-escuro-para-fundos-site);
+    border: solid 3px var(--cor-laranja-az);
+}
+
+/* cabeçalho da Frente do card*/
+.card-frente-conteudo-1{
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--cor-azul-escuro-para-fundos-site);
+    width: 100%;
+    position: absolute;
+}
+
+/* Moeda */
+.icone-azcoin-adicionada-1{
+    /* display: flex; */
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    background-color: orangered;
+}
+/* adicionada id */
+#moeda{
+    margin-top: 0.2rem;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+/* valor numérico da doação */
+.valor-azcoin-historico-1{
+    display: flex;
+    color: var(--cor-laranja-az);
+    padding: 2% 0% 1% 9%;/*8px 10px 0px 5px;*/
+    margin-left: 8px;
+    align-items: center;
+    justify-content: right;
+    margin-right: 10px;
+    background-color: none;
+}
+
+/* imagem central do card - Frente*/
+.img-feed-frente-1{
+    width: 80%; 
+    border-radius: 15px;
+}
+/* adicionado id */
+#imgfeedfrente{
+    height: 80%;
+    position: fixed;
+    top: 16%;
+    left: 10%;
+}
+
+
+
+/* @media only screen and (max-width: 768px)
+{
+ /* .principal */
+ /* .caixa-geral-feedbak-colaborador-1
+    {
+        left: 100px;
+        right: 20px;
+    } */
+/*} */
+
+
+@media only screen and (max-width: 1024px)
+{
+    .caixa-geral-feedbak-colaborador-1 {
+        margin-top: 22px;
+        left: 102px;
+        right: 18px;
+    }
+    .modal-dialog .modal-content {
+        width: 70%;
+        margin-left: 114px;
+    }
+    #header-cont-feed-like {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px)
+{
+    .caixa-geral-feedbak-colaborador-1 {
+        margin-top: 42px;
+        left: 258px;
+        right: 8px;
+    }
+    .modal-dialog .modal-content {
+        width: 30%;
+        margin: auto;
+    }
+    #header-cont-feed-like {
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+/* verso do card */
+.card-tras-1{
+    background-color: var(--cor-azul-escuro-para-fundos-site);
+    transform: rotateY(180deg);
+    border: solid 3px var(--cor-laranja-az);
+}
+
+/* conteúdo do verso d card */
+.card-tras-conteudo-1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* cabeçalho do verso do card - box que contém as imagens doador > receptor*/
+.carde-cabecalho-1{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    height: 70px;
+}
+
+/* definições comuns para os cards - frente e verso */
+.card-frente-1,.card-tras-1{
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+/* definições das imagens doador > destinatario - no verso do card */
+.imagem-envio-1{
+    width: 52px; /*50px*/
+    height: 52px; /*50px*/
+    border-radius: 50%;
+}
+.imagem-envio-1.remetente-1{
+    margin-left: 25px; /*10px*/
+}
+.imagem-envio-1.destinatario-1{
+    margin-left: 10px; /*45px*/
+    margin-right: 10px;
+}
+
+
+/*    Seta   Inicio  */
+#arrowAnim-1 {
+    margin-top: 5px;
+    width: 1px;
+    display: flex;
+    height: 50px;
+    margin-left: 120px;
+}
+
+.arrow-1 {
+    width: 9px;
+    border: 0.6vw solid;
+    border-color: var(--cor-laranja-az) transparent transparent var(--cor-laranja-az);
+    transform: rotate(135deg);
+}
+
+.arrowSliding-1 {
+    position: absolute;
+    -webkit-animation: slide 4s linear infinite; 
+    animation: slide 4s linear infinite;   
+}
+
+.delay1-1 {
+    -webkit-animation-delay: 1s; 
+    animation-delay: 1s;
+}
+.delay2-1 {
+    -webkit-animation-delay: 2s; 
+    animation-delay: 2s;
+}
+.delay3-1 {
+    -webkit-animation-delay: 3s; 
+    animation-delay: 3s;
+}
+
+@-webkit-keyframes slide {
+    0% { opacity:0; transform: translateX(-9px);}	
+    20% { opacity:0; transform: translateX(-100px);}	
+    80% { opacity:0; transform: translateX(10px);}	
+    100% { opacity:0; transform: translateX(-15px);}	
+}
+@keyframes slide {
+    0% { opacity:0; transform: translateX(135px);}	
+    20% { opacity:0.1; transform: translateX(-135px);}
+    80% { opacity:1; transform: translateX(-8px);}	
+    100% { opacity:0; transform: translateX(-30px);}	
+}
+/*    Seta  Final   */
+
+
+/* Verso do card - box do feedback incluido nomes remetente > destinatario */
+.carde-feedback-1{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Verso do card - APENAS o box dos nomes do remente > destinatário */
+.identificacao-feedback-1{
+    margin-top: 0%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Verso do card - apenas o nome do destinatário */
+.nome-destinatario-1{
+    color: var(--cor-branca-para-fundos-escuros);
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+/* Verso do card - apenas o nome do remente */
+.nome-remetente-1{
+    color: var(--cor-branca-para-fundos-escuros);
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+/* Verso do card - SOMENTE o texto "Feedback" */
+.feedback-titulo-1{
+    color: var(--cor-branca-para-fundos-escuros);
+    margin-top: 5px;
+}
+
+/* Verso do card - mensagem do feedback (doação) */
+.feedback-enviado-1{
+    font-size: 16px;
+    display: flex;
+    height: 100%;
+    width: 87%;
+    color: var(--cor-branca-para-fundos-escuros);
+    text-align: justify;
+    text-indent: 20px; /* definição do recuo do paragráfo */
+    margin-top: 5px;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.feedback-enviado-1:hover{
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* INICIO MODAL */
+
+/* div (.joinha) */
+.joinha{
+    margin-top: 1px;/*21.5rem;*/
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* somente IDs #like, #dislike - thumb up, thumb down */
+#like, 
+#dislike{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 0.01%;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+}
+#like{
+    margin: 0.25rem 0 0.75rem 4.5rem;
+    position: fixed;
+    background-color: green;
+}
+#dislike{
+    margin: 0.25rem 0 0.75rem 10rem;
+    position: relative;
+    background-color: red;
+}
+#like:hover,
+#dislike:hover{
+    padding: 1.5%;
+}
+
+/* adiciona animação - decida da janela - (Chrome, Safari, Opera) */
+@-webkit-keyframes joinha {
+    from {top:-100px;opacity: 0;}
+    to {top:0px;opacity:1;}
+}
+  
+/* adciona animação - decidada janela - (Standard syntax) */
+@keyframes joinha {
+    from {top:-100px;opacity: 0;}
+    to {top:0px;opacity:1;}
+}
+    
+/* O fundo do modal - The modal's background */
+.modal-feed {
+    display: none;
+    position: fixed;
+    /* left: 17.5rem;
+    top: 4rem;
+    width: 60%;
+    height: 60%; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 99;
+}
+  
+/* Mostra o modal quando estiver "no alvo" - Display the modal when targeted */
+.modal-feed:target {
+    display: table;
+    position: absolute;
+}
+  
+/* The modal box */
+.modal-dialog {
+    display: table-cell;
+    vertical-align: middle;
+}
+  
+/* The modal's content */
+.modal-dialog .modal-content {
+    /* margin: auto; */ /* linha adicionada no @media */
+    /* width: 30%; */   /* Linha adicionada no @media */
+
+    background-color: #f3f3f3;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    border: 1px #777 solid;
+    text-align: justify;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+    /* adiciona animação */
+    -webkit-animation-name: joinha; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+    animation-name: joinha;
+    animation-duration: 0.5s;
+}
+  
+/* Botão para fechar o modal -The button used to close the modal */
+.closebtn-feed {
+    text-decoration: none;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    background-color: red;
+    position: absolute;
+    top: 0.3rem;
+    left: 93.5%; /*19.5rem;*/
+    line-height: 0.5;
+    padding: 0.5% 0.5% 0 0.5%;
+}
+  
+.closebtn-feed:hover,
+.closebtn-feed:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: red;
+    margin-right: 80%;
+    left: 93.5%;
+    line-height: 0.5;
+}
+  
+.container-feed-like {
+    padding: 2px 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#header-cont-feed-like {
+    background-color: #5cb85c;
+    /* font-size: 25px; */
+    color: white;
+  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+  
+#footer-cont-feed-like {
+    background-color: #5cb85c;
+    font-size: 20px;
+    color: white;
+}
+  
+.container-feed-dislike {
+    padding: 2px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.justify-modal{
+    background-color: orangered;
+    padding: 2px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+#aviso-dislike{
+    font-size: medium;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+  
+#header-cont-feed-dislike {
+    background-color: orangered;
+    font-size: 25px;
+    color: white;
+}
+  
+#footer-cont-feed-dislike {
+    background-color: orangered;
+    font-size: 20px;
+    color: white;
+}
+
+#justify-form1 {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 2rem;
+    margin: 1.5% 0% 0% 14.5rem;
+}
+
+/* FIM MODAL */

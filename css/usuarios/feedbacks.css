@@ -1,0 +1,390 @@
+:root{
+    /*Cores*/
+    --cor-fundo-menu: rgb(0, 36, 54);
+    --cor-laranja-az: rgb(239, 78, 35);
+    /*Transições*/
+    --tran-menu: 0.5s all ease;
+    /*Tamanho de fontes*/
+    --tamanho-fonte-titulo-tela: 20px;
+    --tamanho-fonte-span-input: 16px;
+    --tamanho-fonte-titulo-card: 18px;
+    --escrita-cliente-tamanho-fonte-texto-input: 14px;
+    /* Paleta de cores AZ */
+    --cor-branca-para-fundos-escuros: rgb(255,255,255);
+    --cor-laranja-fraco-para-texto: rgb(215, 91, 54);
+    --cor-azul-escuro-para-caixas-dentro-site: rgb(23,61,87);
+    --cor-azul-escuro-para-fundos-site: rgb(0,36,54);
+    --fonte-Tomorrow: 'Tomorrow', sans-serif;
+    --cor-cinza-apagado: rgba(217, 217, 217, 0.30);
+    --cor-cinza: rgb(217,217,217);
+}
+
+/*Inicio Tela Feedback Colaborador*/
+
+
+
+.caixa-geral-feedbak-colaborador{
+    width: auto;
+    background-color: var(--cor-cinza-apagado);
+    border-radius: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 3%;
+    left: 300px;
+    right: 50px;
+    height: 75vh;
+    padding: 10px;
+}
+
+.cabeçalho-feedback-colaborador{
+    margin-top: 0.5%;
+    display: flex;
+    width: 100%;
+    border-bottom: solid 3px;
+    border-color: var(--cor-laranja-az);
+}
+
+
+.seleciona-feed-colaborador{
+    display: flex;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0.5rem;
+}
+
+.seleciona-feed-colaborador:hover{
+    background-color: var(--cor-laranja-az);
+    cursor: pointer;
+}
+.seleciona-feed-colaborador:hover .texto-opcao-feedback-colaborador{
+    color: black;
+}
+
+
+.texto-opcao-feedback-colaborador.focado{
+    color: black;
+}
+
+
+.texto-opcao-feedback-colaborador{
+    font-size: var(--tamanho-fonte-titulo-tela);
+    background-color: transparent;
+    border: none;
+    color: var(--cor-branca-para-fundos-escuros);
+    
+}
+.texto-opcao-feedback-colaborador:hover{
+    cursor:pointer;
+    color: black;
+}
+.conteudo-feedbacks-colaborador{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2%;
+    height: 67vh;
+    background-color: gray;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 1;
+    border-top: 3px solid var(--cor-laranja-az);    
+}
+.conteudo-feedbacks-colaborador::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--cor-cinza);
+    border-radius: 10px;
+
+}
+.conteudo-feedbacks-colaborador::-webkit-scrollbar-thumb{
+    background-color: var(--cor-laranja-az);
+    border-radius: 10px;
+}
+.remetente-feedback-nome{
+    display: flex;
+    margin-right: 4px;
+}
+.mensagem-envio-feedback{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--cor-laranja-az);
+
+}
+
+.seleciona-feed-colaborador.principal-texto-opcao{
+    background-color: var(--cor-laranja-az);
+}
+.borda{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    
+}
+
+
+.valor-azcoin-historico{
+    display: flex;
+    color: var(--cor-laranja-az);
+    padding: 8px 10px 0px 5px;
+    
+}
+.caixa-azcoin-historico{
+    display: flex;
+    max-width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--cor-azul-escuro-para-fundos-site);
+}
+.icone-azcoin-adicionada{
+    display: flex;
+    width: 40px;
+    padding-left:10px;
+    padding-top: 2px;
+}
+
+/*inicio seta*/
+
+#arrowAnim {
+    margin-top: 5px;
+    width: 10px;
+    display: flex;
+    height: 50px;
+    margin-left: 120px;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; /* Metade da largura da seta em pixels */
+    border-right: 5px solid transparent; /* Metade da largura da seta em pixels */
+    border: 18px solid;
+    border-color: var(--cor-laranja-az) transparent transparent var(--cor-laranja-az);
+    transform: rotate(135deg);
+}
+
+
+.arrowSliding {
+    position: absolute;
+    -webkit-animation: slide 4s linear infinite; 
+    animation: slide 4s linear infinite;   
+}
+
+.delay1 {
+    -webkit-animation-delay: 1s; 
+    animation-delay: 1s;
+}
+.delay2 {
+    -webkit-animation-delay: 2s; 
+    animation-delay: 2s;
+}
+.delay3 {
+    -webkit-animation-delay: 3s; 
+    animation-delay: 3s;
+}
+
+@-webkit-keyframes slide {
+    0% { opacity:0; transform: translateX(-9px);}	
+    20% { opacity:0; transform: translateX(-100px);}	
+    80% { opacity:0; transform: translateX(10px);}	
+    100% { opacity:0; transform: translateX(-15px);}	
+}
+@keyframes slide {
+    0% { opacity:0; transform: translateX(135px);}	
+    20% { opacity:0.1; transform: translateX(-135px);}
+    80% { opacity:1; transform: translateX(-8px);}	
+    100% { opacity:0; transform: translateX(-30px);}	
+}
+
+
+
+
+/*Fim Seta*/
+
+/*------------------------------------------------------*/
+
+.carde-conteudo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.imagem-envio{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.imagem-envio.remetente{
+    margin-left: 10px;
+}
+.imagem-envio.destinatario{
+    margin-left: 45px;
+    margin-right: 10px;
+}
+
+.carde-cabecalho{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    height: 70px;
+}
+
+.identificacao-feedback{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.nome-destinatario{
+    color: var(--cor-branca-para-fundos-escuros);
+    margin-right: 10px;
+}
+.nome-remetente{
+    color: var(--cor-branca-para-fundos-escuros);
+    margin-left: 10px;
+}
+
+.filtros{
+    width: 100%;
+    display: flex;
+    background-color: var(--cor-azul-escuro-para-caixas-dentro-site);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding-top: 10px;
+}
+
+
+
+/*   Card Girando inicio     */
+.container-card{
+    height: 370px;
+    width: 290px;
+    perspective: 800px;
+    margin: 10px 10px 2px 10px;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.card-frente{
+    display: flex;
+    flex-direction: column;
+}
+.img-feed-frente{
+    height: 370px;
+    width: 290px;
+    border-radius: 15px;
+}
+.card-frente-conteudo{
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    border-radius: 15px 15px 0px 0px;
+    background-color: var(--cor-azul-escuro-para-fundos-site);
+    width: 100%;
+    position: absolute;
+}
+.card-tras{
+    background-color: var(--cor-azul-escuro-para-fundos-site);
+    transform: rotateY(180deg);
+    border: solid 3px var(--cor-laranja-az);
+}
+
+.card-frente,.card-tras{
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.container-card:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.card-tras-conteudo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.carde-feedback{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.feedback-titulo{
+    color: var(--cor-branca-para-fundos-escuros);
+}
+.feedback-enviado{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 5px 25px 0px 25px;
+    color: var(--cor-branca-para-fundos-escuros);
+    word-break: break-all;
+}
+
+.formula{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.test{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 10px 10px 0px 0px;
+}
+.test.principal{
+    background-color: var(--cor-azul-escuro-para-caixas-dentro-site);
+}
+.muda-tela.focado{
+    color: var(--cor-branca-para-fundos-escuros);
+}
+.muda-tela{
+    border: none;
+    background-color: transparent;
+    font-family: var(--fonte-Tomorrow);
+    font-size: var(--tamanho-fonte-titulo-tela);
+}
+.muda-tela:hover{
+    cursor: pointer;
+}
+
+
+.test:hover{
+    cursor: pointer;
+    background-color: var(--cor-azul-escuro-para-caixas-dentro-site);
+    color: var(--cor-branca-para-fundos-escuros);
+}
+
+.test:hover .muda-tela{
+    color: var(--cor-branca-para-fundos-escuros);
+}
+.filtro-dest{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+/*Configurações do Site Responsivo*/
+@media only screen and (max-width: 768px){
+    .caixa-geral-feedbak-colaborador{
+        left: 100px;
+    }  
+}

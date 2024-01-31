@@ -1,0 +1,245 @@
+:root{
+    /*Cores*/
+    --swiper-pagination-color: var(--cor-laranja-az);
+    --swiper-navigation-color: var(--cor-laranja-az);
+}
+.main-home{
+    position: fixed;
+    z-index: 2;
+    width: auto;
+    left: 300px;
+    right: 50px;
+    height: 75vh;
+    background-color: rgba(217, 217, 217, .44);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(191, 191, 191);
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.azcard{
+    position: relative;
+    display: flex;
+    min-width: 300px;
+    max-width: 340px;
+    height: 200px;
+}
+.azcard .background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    min-width: 300px;
+    max-width: 340px;
+    height: 200px;
+    background: linear-gradient(90deg, #0500E9 0%, #2559A2 15.70%, #DC7B52 47.76%, #F44336 76.56%, #EF4E23 100%);
+    filter: blur(40px);
+}
+.azcard .cardcontent{
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    min-width: 300px;
+    max-width: 340px;
+    height: 210px;
+    border-radius: 15px;
+    border: 0px solid black;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    background-color: rgb(0, 36, 54);
+}
+.azcard .cardcontent .first-content{
+    width: 100%;
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: space-around;
+}
+.azcard .cardcontent .chip{
+    display: flex;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+.azcard .cardcontent #black{
+    position: absolute;
+    bottom: 20%;
+    left: 8%;
+    font-size: 13px;
+    color: FFFFFF;
+    font-weight: bold;
+}
+.azcard .cardcontent .last-content{
+    color: rgba(134, 133, 135, 1);
+    width: 100%;
+    position: absolute;
+    bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 13px;
+}
+.azcard .cardcontent .last-content img{
+    width: 37px;
+    height: 37px;
+}
+/*CARDS DOS SALDOS DO USUÁRIO*/
+.saldosaz{
+    display: flex;
+    min-width: 60%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.azrecebidos{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+    background-color: var(--cor-fundo-menu);
+    border-radius: 15px;
+    border: 2px solid var(--cor-laranja-az);
+}
+.azrecebidos img{
+    width: 37px;
+    height: 37px;
+}
+.azparaenvios{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+    background-color: var(--cor-fundo-menu);
+    border-radius: 15px;
+    border: 2px solid var(--cor-laranja-az);
+}
+.azparaenvios img{
+    width: 37px;
+    height: 37px;
+}
+
+.primeiro{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin-top: 5%;
+    gap: 10px;
+}
+.valor{
+    position: absolute;
+    display: flex;
+    align-self: center;
+    font-size: 30px;
+    font-weight: bolder;
+    top: 40%;
+}
+.xpira{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.boxloja{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 350px;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: var(--cor-fundo-menu);
+    border: 2px solid var(--cor-laranja-az);
+    padding-top: 30px;
+}
+.boxloja span{
+    color: white;
+    align-self: center;
+}
+.boxloja .swiper{
+    margin-top: 40px;
+    width: 80%;
+    border-radius: 15px;
+    height: 160px;
+    background-color: white;
+    padding-bottom: 5px !important;
+}
+.boxloja .swiper .swiper-wrapper .swiper-slide{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boxloja .swiper .swiper-wrapper .swiper-slide .project-img img{
+    width: 100%;
+}
+.boxloja .button-loja{
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    bottom: 15px;
+    align-self: center;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background: #D75B37;
+}
+/*Carrossel*/
+.carrosselhome{
+    height: 350px;
+    min-width: 300px;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: var(--cor-fundo-menu);
+}
+
+/*Configurações do Site Responsivo*/
+@media only screen and (max-width: 768px){
+    .main-home{
+        left: 100px;
+        right: 20px;
+    }
+}
+
+/*Propriedades da Barra de Rolagem*/
+/*width*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track{
+    background: none;
+}
+/* Handle */
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: var(--cor-laranja-az);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+    background: var(--cor-laranja-az);
+}

@@ -1,0 +1,243 @@
+.main-carteira{
+    z-index: 2;
+    position: fixed;
+    width: auto;
+    left: 300px;
+    right: 50px;
+    height: auto;
+    top: 140px;
+    bottom: 40px;
+    background-color: rgba(217, 217, 217, .44);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(191, 191, 191);
+    top: 120px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 10px 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/*SALDOS AZCOIN E AZMERIT*/
+.main-carteira .azscore{
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+}
+.main-carteira .azscore .azcoinscore,
+.main-carteira .azscore .azmeritscore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-carteira .azscore .azcoinscore .valores{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+.main-carteira .azscore .azcoinzinha{
+    width: 28px;
+    height: 27px;
+}
+.main-carteira .azscore .azmeritscore .valores{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+/*TABELA COM VALORES*/
+.main-carteira .main-score-history{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+/*POSIÇÃO IMAGEM E TEXTO*/
+.main-carteira .main-score-history .div-principal .mr-yellow{
+    position: absolute;
+    width: 113px;
+    height: 113px;
+    top: -100px;
+    left: 0;
+}
+/*TABELAS*/
+.main-carteira .main-score-history .div-principal{
+    color: white;
+    position: relative;
+    width: 95%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--cor-fundo-menu);
+    margin-top: 20px;
+    /*USAR APENAS PARA TESTE*/
+    height: 60%;
+    min-height: 200px;
+}
+/*TABELA*/
+.main-carteira .main-score-history .div-principal .div-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 310px;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+/*POSIÇÃO DO NOME, VALOR E DATA RESPECTIVAMENTE DENTRO DA TABELA*/
+.main-carteira .main-score-history .div-principal .div-table .span-nome{
+    position: absolute;
+    left: calc(2% + 50px);
+}
+.main-carteira .main-score-history .div-principal .div-table .span-valor{
+    position: absolute;
+    left: 45%;
+}
+.main-carteira .main-score-history .div-principal .div-table .span-data{
+    position: absolute;
+    right: 5%;
+}
+.main-carteira .main-score-history .div-principal .table-score{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+.main-carteira .main-score-history .div-principal .table-score .thead-score{
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-fundo-menu);
+}
+.main-carteira .main-score-history .div-principal .div-table .head-tabela{
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: 25px;
+    margin: 10px 0px 10px 0px;
+}
+.main-carteira .main-score-history .div-principal .div-table .tabela{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main-carteira .main-score-history .div-principal .div-table .linha-table{
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: 25px;
+    margin: 10px 0px 10px 0px;
+}
+.main-carteira .main-score-history .div-principal .div-table .element-table{
+    display: flex;
+    align-items: center;
+}
+/*POSIÇÃO DOS ÍCONES DENTRO DA TABELA*/
+.main-carteira .main-score-history .div-principal .div-table .element-table .img-nome{
+    position: absolute;
+    left: 2%;
+    width: 45px;
+    height: 38px;
+}
+.main-carteira .main-score-history .div-principal .div-table .element-table .azcoin{
+    position: absolute;
+    left: calc(45% - 30px);
+    width: 28px;
+    height: 27px;
+}
+
+/*LINHA QUE DIVIDE AS TABELAS*/
+.tabela hr{
+    border: 1px solid grey;
+}
+.linha-divisoria{
+    border: 1px solid white;
+}
+
+/*Propriedades da Barra de Rolagem*/
+/*width*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track{
+    background: none;
+}
+/* Handle */
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: var(--cor-laranja-az);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+    background: var(--cor-laranja-az);
+}
+
+/*Configurações do Site Responsivo*/
+@media screen and (max-width: 768px){
+    /*Distância horizontal do Menu Lateral*/
+    .main-carteira{
+        left: 100px;
+        right: 20px;
+    }
+    /*Não aparecer o boneco*/
+    .main-carteira .main-score-history .div-principal .mr-yellow{
+        display: none;
+    }
+    .main-carteira .main-score-history .div-principal{
+        flex-direction: column;
+        height: 550px;
+    }
+    .main-carteira .main-score-history .div-principal .div-table{
+        height: 50%;
+        min-width: 280px;
+        font-size: 13px;
+    }
+    .main-carteira .main-score-history .div-principal .div-table span{
+        margin-left: 0px;
+    }
+    .main-carteira .img-nome{
+        display: none;
+    }
+    .main-carteira .azcoin{
+        display: none;
+    }
+    .main-carteira .carteira{
+        display: none;
+    }
+    .main-carteira .main-score-history .div-principal .div-table .span-nome{
+        left: 5%;
+    }
+    .main-carteira .main-score-history .div-principal .div-table .span-valor{
+        left: 48%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1400px){
+    /*Não aparecer o boneco*/
+    .main-carteira .main-score-history .div-principal .mr-yellow{
+        display: none;
+    }
+    .main-carteira .main-score-history .div-principal{
+        flex-direction: column;
+        height: 550px;
+    }
+    .main-carteira .main-score-history .div-principal .div-table{
+        height: 50%;
+        min-width: 280px;
+    }
+    .main-carteira .main-score-history .div-principal .div-table .span-valor{
+        left: 48%;
+    }
+    .main-carteira .main-score-history .div-principal .div-table .element-table .azcoin{
+        left: calc(48% - 30px);
+    }
+}
+/*https://codepen.io/leusrox/pen/RgJKJx*/

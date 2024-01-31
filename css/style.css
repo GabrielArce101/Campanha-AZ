@@ -1,0 +1,420 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.bodyLogin{
+  background-color: rgb(10, 35, 52);
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/fundoLaranja.png);
+  background-repeat: no-repeat;
+  font-family: 'Tomorrow', sans-serif;
+}
+#atorLogin{
+  position: absolute;
+  width: 612px;
+  height: 390px;
+  top: 500px;
+  left: 8%;
+}
+#moedaFrente{
+  width: 600px;
+  position: absolute;
+  left: 13%;
+  top: 20%;
+  animation: coin-frente 4s linear infinite;
+}
+#sectionLogin{
+  position: absolute;
+  background-color: rgba(23, 61, 87);
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  top: 24%;
+  left: 60%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgb(0,0,0,0.450);
+}
+.imgLogin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+#img-login{
+  width: 60%;
+}
+.campo{
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 30px;
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
+  top: 70px;
+  align-items: center;
+  gap: 8px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.cont-pass{
+  display: flex;
+  width: 100%;
+}
+.div_senha{
+  position: relative;
+}
+#btn-senha{
+  position: absolute;
+  right: 2%;
+  top: 0px;
+  font-size: 20px;
+  color: rgba(240, 132, 89, 0.555);
+  cursor: pointer;
+}
+.msgErro{
+  display: flex;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  z-index: 50;
+  width: 400px;
+  justify-content: center;
+}
+.p_msgErro{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+.EntrarLogin{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  align-self: center;
+  display: flex;
+  bottom: 15%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.entrar{
+  text-align: center;
+  font-size: 1em;
+  width: 150px;
+  border-radius: 50px;
+  height: 30px;
+  background-color: rgba(215, 91, 54);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.entrar:hover{
+  opacity: 80%;
+}
+.botao{
+  display: block;
+  text-align: left;
+  width: fit-content;
+  height: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  margin-top: 73px;
+  margin-left: 239px;
+}
+.botao:hover{
+  color:rgba(215, 91, 54);
+  opacity: 80%;
+}
+.icons{
+  font-size: 2em;
+  width: 30px;
+  padding: 5px;
+ border: 0px;
+}
+.inputLogin{
+  display: block;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #D55A3B;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  width: 300px;
+  height: 25px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: rgb(255, 255, 255) !important;
+}
+@keyframes coin-frente{
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform:  rotateY(180deg);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .bodyLogin{
+    background-size: 100% 100%;
+  }
+  .botao{
+    margin-left: 190px;
+  }
+  .inputLogin{
+    width: 260px;
+  }
+  #sectionLogin{
+    top: 50%;
+    left: 50%;
+    width: 330px;
+    height: 430px;
+    transform: translate(-50%,-50%);
+  }
+  .msgErro{
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #atorLogin{
+    display: none;
+  }
+  .loader{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1110px){
+  .bodyLogin{
+    background-size: 100% 115%;
+  }
+  #sectionLogin{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+  }
+  .msgErro{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+  }
+  #atorLogin{
+    top: 68%;
+    left: 50%;
+    width: 512px;
+    height: 290px;
+    transform: translate(-50%);
+  }
+}
+/* PAGINA RECUPERAR SENHA */
+.form-recuperar{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  width: 390px;
+  height: 290px;
+  background-color: rgba(23, 61, 87);
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgb(0,0,0,0.450);
+  border-radius: 20px;
+}
+.text_h1{
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 25px;
+}
+.campo_recu{
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 30px;
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
+  top: 11px;
+  align-items: center;
+  gap: 8px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.input-Recu{
+  display: block;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #D55A3B;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  width: 300px;
+  height: 25px;
+}
+.lembrou_recu{
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+.p_recu{
+  color: white;
+  margin-top: 14px;
+  margin-right: 15px;
+}
+.a_recu{
+  color:rgba(215, 91, 54);
+  text-decoration: none;
+}
+.a_recu:hover{
+  color:rgba(215, 91, 54);
+  opacity: 60%;
+}
+.div_botao_recu{
+  display: flex;
+  justify-content: center;
+  margin-top: 65px;
+}
+.entrar_recu{
+  text-align: center;
+  font-size: 1em;
+  width: 150px;
+  border-radius: 50px;
+  height: 30px;
+  background-color: rgba(215, 91, 54);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.msgErroRecu{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-top: 40px;
+  z-index: 50;
+  width: 400px;
+  justify-content: center;
+}
+.p_msgErro{
+  font-size: 18px;
+}
+.janelaModal{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.205);
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modalRecu{
+  width: 40%;
+  min-width: 450px;
+  min-height: 200px;
+  background-color: rgba(37, 89, 162, 0.719);
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgb(0,0,0,0.450);
+}
+.fechar_recu{
+  position: absolute;
+  top: 140px;
+  right: 35px;
+  width: 60px;
+  height: 30px;
+  border-radius:5px;
+  border: none;
+  background-color: rgba(215, 91, 54);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.janelaModal.abrir{
+  display: flex;
+}
+.p_modal{
+  color: white;
+  font-size: 22px;
+}
+@keyframes openModal{
+  from{
+    opacity: 0;
+    transform: translate3d(0, -20px, -5px);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+.abrir .modalRecu{
+  animation: openModal 0.4s;
+}
+
+/*PAGINA ATUALIZAR SENHA*/
+.msg_atualizar{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-top: 35px;
+  z-index: 50;
+  width: 400px;
+  justify-content: center;
+}
+.p_msgErroAtu{
+  display: flex;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+.fechar_atu{
+  position: absolute;
+  top: 140px;
+  right: 35px;
+  width: 60px;
+  height: 30px;
+  border-radius:5px;
+  border: none;
+  background-color: rgba(215, 91, 54);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+  .form-recuperar{
+    width: 360px;
+    height: 260px;
+  }
+  .p_recu{
+    margin-right: 25px
+  }
+  .modalRecu{
+    min-width: 370px;
+  }
+  .fechar_recu{
+    top: 180px;
+  }
+  .fechar_atu{
+    top: 145px;
+  }
+}
