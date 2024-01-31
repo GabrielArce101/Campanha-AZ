@@ -1,0 +1,8 @@
+{
+    "name":"senac/azmerit",
+    "autoload": {
+        "psr-4":{
+            "App\\":"App/"
+        }
+    }
+}
